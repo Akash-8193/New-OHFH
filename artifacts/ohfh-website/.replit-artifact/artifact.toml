@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "One Hand for Happiness"
+version = "1.0.0"
+id = "artifacts/ohfh-website"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23317
+
+[services.development]
+run = "pnpm --filter @workspace/ohfh-website run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ohfh-website", "run", "build" ]
+publicDir = "artifacts/ohfh-website/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23317"
+BASE_PATH = "/"

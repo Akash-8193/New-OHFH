@@ -1,0 +1,62 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "Y-rnZZ2xXIXDt2cGJz_Z8"
+uri = "file://artifacts/ohfh-website/src/assets/images/home-about.png"
+type = "image"
+title = "Children learning smiling"
+
+[[generated]]
+id = "87NR2Ed8qJXXJfOU6aXlo"
+uri = "file://artifacts/ohfh-website/src/assets/images/project-education.png"
+type = "image"
+title = "Child education card"
+
+[[generated]]
+id = "7arwteRTE8KJL8UuIXHQ0"
+uri = "file://artifacts/ohfh-website/src/assets/images/project-women.png"
+type = "image"
+title = "Women empowerment card"
+
+[[generated]]
+id = "RWydyR8GSGBc7JPTLnCUW"
+uri = "file://artifacts/ohfh-website/src/assets/images/project-skill.png"
+type = "image"
+title = "Skill development card"
+
+[[generated]]
+id = "Pzxrt5HMWDVRMqehP2aSa"
+uri = "file://artifacts/ohfh-website/src/assets/images/project-exhibition.png"
+type = "image"
+title = "Exhibitions card"
+
+[[generated]]
+id = "vJGEYYMWGDkMJDkYGvUOe"
+uri = "file://artifacts/ohfh-website/src/assets/images/about-hero.png"
+type = "image"
+title = "About page hero"
+
+[[generated]]
+id = "DVbKo0TjQ-dH8eRzEQziA"
+uri = "file://artifacts/ohfh-website/src/assets/images/hero-child.png"
+type = "image"
+title = "Child education hero"
+
+[[generated]]
+id = "uQUUfuiWd-FeSUNpqXoeI"
+uri = "file://artifacts/ohfh-website/src/assets/images/hero-women.png"
+type = "image"
+title = "Women empowerment hero"
+
+[[generated]]
+id = "aZV1tV1ON4Q71yV-Vt8_3"
+uri = "file://artifacts/ohfh-website/src/assets/images/hero-skill.png"
+type = "image"
+title = "Skill development hero"
+
+[[generated]]
+id = "2Q4YFqGa_aUagMcoobfjk"
+uri = "file://artifacts/ohfh-website/src/assets/images/hero-exhibition.png"
+type = "image"
+title = "Exhibitions hero"
