@@ -88,67 +88,80 @@ const Home = () => {
         </motion.div>
       </section>
 
-      {/* About Preview Section */}
+      {/* Our Programs Section */}
       <section className="py-24 bg-white relative">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div 
-              initial="hidden" whileInView="show" viewport={{ once: true, margin: "-100px" }}
-              variants={fadeUp}
-            >
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-ultra-violet mb-6">Changing Lives Through Action</h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                One Hand for Happiness (OHFH) is a community-driven NGO dedicated to breaking the cycle of poverty through education and nourishment. Our holistic approach ensures every child receives not just academic support but also the essentials for a healthy, fulfilling life.
-              </p>
-              
-              <div className="space-y-6 mb-8">
-                <div className="flex gap-4">
-                  <div className="mt-1 w-10 h-10 rounded-full bg-ultra-violet/10 flex items-center justify-center shrink-0">
-                    <CheckCircle2 className="text-ultra-violet" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Our Mission</h3>
-                    <p className="text-gray-600">To empower underprivileged children by providing access to education, wholesome mid-day meals, and community programs that foster self-reliance and lifelong success.</p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="mt-1 w-10 h-10 rounded-full bg-bright-lime/20 flex items-center justify-center shrink-0">
-                    <Globe className="text-lime-600" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Our Vision</h3>
-                    <p className="text-gray-600">A world where every child, regardless of their socio-economic background, can learn, grow, and achieve their dreams.</p>
-                  </div>
-                </div>
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
+            <div className="max-w-2xl">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-2 h-2 rounded-full bg-[#FF6B9E]"></div>
+                <span className="text-[#FF6B9E] font-bold tracking-wider uppercase text-sm">OUR PROGRAMS</span>
               </div>
-              
-              <Link href="/about" className="inline-flex items-center gap-2 text-orioles-orange font-bold text-lg hover:gap-3 transition-all" data-testid="link-about-more">
-                About More <ArrowRight size={20} />
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-ultra-violet leading-tight">Changing Lives Through Action</h2>
+            </div>
+            <div className="max-w-md text-gray-600">
+              <p className="mb-6">With a commitment to excellence and community care, we offer comprehensive support through our targeted programs.</p>
+              <Link href="/contact-us" className="inline-flex items-center justify-center bg-[#FF6B9E] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#e65a8d] transition-colors">
+                Donate Now <ArrowRight size={18} className="ml-2" />
               </Link>
+            </div>
+          </div>
+
+          <motion.div 
+            initial="hidden" whileInView="show" viewport={{ once: true, margin: "-50px" }}
+            variants={staggerContainer}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+          >
+            {/* Row 1 */}
+            <motion.div variants={fadeUp} className="rounded-3xl overflow-hidden aspect-square md:aspect-auto h-full min-h-[400px]">
+              <img src="/src/assets/images/education_program.png" alt="Education Program" className="w-full h-full object-cover" />
             </motion.div>
             
-            <motion.div 
-              initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative">
-                <img src="/src/assets/images/home-about.png" alt="Children learning and smiling" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-ultra-violet/80 to-transparent"></div>
-                <div className="absolute bottom-8 left-8 right-8">
-                  <div className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl">
-                    <div className="text-3xl font-bold text-ultra-violet mb-1">
-                      <AnimatedCounter end={500} suffix="+" />
-                    </div>
-                    <div className="text-gray-600 font-medium">Children Educated</div>
-                  </div>
-                </div>
+            <motion.div variants={fadeUp} className="bg-[#FF6B9E] rounded-3xl p-8 lg:p-12 text-white flex flex-col justify-between min-h-[400px]">
+              <div>
+                <h3 className="text-xl font-bold mb-6">Education for Every Child</h3>
+                <p className="text-white/90 leading-relaxed mb-8">
+                  We provide academic support, scholarships, and learning resources to help children overcome barriers and excel in their studies. Collaborating with local schools, our programs ensure that education is not just a privilege but a right for all.
+                </p>
               </div>
-              
-              {/* Decorative elements */}
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-bright-lime rounded-full opacity-20 blur-2xl"></div>
-              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-orioles-orange rounded-full opacity-20 blur-2xl"></div>
+              <Link href="/contact-us" className="inline-flex w-full justify-center bg-[#1B2155] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#12163b] transition-colors">
+                Support Now
+              </Link>
             </motion.div>
-          </div>
+
+            <motion.div variants={fadeUp} className="rounded-3xl overflow-hidden aspect-square md:aspect-auto h-full min-h-[400px]">
+              <img src="/src/assets/images/meals_program.png" alt="Meals Program" className="w-full h-full object-cover" />
+            </motion.div>
+
+            {/* Row 2 */}
+            <motion.div variants={fadeUp} className="bg-[#F4F6FC] rounded-3xl p-8 lg:p-12 text-[#1B2155] flex flex-col justify-between min-h-[400px]">
+              <div>
+                <h3 className="text-xl font-bold mb-6">Nutritious Mid-Day Meals</h3>
+                <p className="text-[#1B2155]/80 leading-relaxed mb-8">
+                  A hungry child cannot learn. Our meal program offers fresh, nutritious food to keep young minds sharp and focused, enhancing both their health and academic performance.
+                </p>
+              </div>
+              <Link href="/contact-us" className="inline-flex w-full justify-center bg-[#FF6B9E] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#e65a8d] transition-colors">
+                Support Now
+              </Link>
+            </motion.div>
+
+            <motion.div variants={fadeUp} className="rounded-3xl overflow-hidden aspect-square md:aspect-auto h-full min-h-[400px]">
+              <img src="/src/assets/images/community_program.png" alt="Community Program" className="w-full h-full object-cover" />
+            </motion.div>
+
+            <motion.div variants={fadeUp} className="bg-[#1B2155] rounded-3xl p-8 lg:p-12 text-white flex flex-col justify-between min-h-[400px]">
+              <div>
+                <h3 className="text-xl font-bold mb-6">Community Engagement & Support</h3>
+                <p className="text-white/80 leading-relaxed mb-8">
+                  We empower families through workshops, events, and local partnerships, fostering a culture of shared responsibility and growth that benefits entire communities.
+                </p>
+              </div>
+              <Link href="/contact-us" className="inline-flex w-full justify-center bg-[#FF6B9E] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#e65a8d] transition-colors">
+                Support Now
+              </Link>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
@@ -165,51 +178,64 @@ const Home = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-50px" }}
-            className="grid md:grid-cols-3 gap-8"
+            className="grid md:grid-cols-3 gap-6 lg:gap-8"
           >
             {[
               {
-                icon: <Heart size={32} />,
+                icon: <Heart size={24} />,
                 title: "Donate",
                 desc: "Your generosity fuels everything we do. A small contribution can mean a child in school, a woman empowered, or a family with a future.",
-                color: "bg-orioles-orange",
                 link: "https://razorpay.me/@onehandforhappiness",
-                isExternal: true
+                isExternal: true,
+                cardClasses: "bg-bright-lime text-white",
+                iconClasses: "p-2 text-white",
+                buttonClasses: "bg-white text-bright-lime hover:bg-gray-100",
+                descClasses: "text-white/95"
               },
               {
-                icon: <Users size={32} />,
+                icon: <Users size={24} />,
                 title: "Volunteer",
                 desc: "Your time and skills can change lives. Whether teaching, mentoring, or simply lending a helping hand, you can make a real difference.",
-                color: "bg-ultra-violet",
                 link: "/volunteer-application",
-                isExternal: false
+                isExternal: false,
+                cardClasses: "bg-orioles-orange text-white",
+                iconClasses: "p-2 text-white",
+                buttonClasses: "bg-white text-orioles-orange hover:bg-gray-100",
+                descClasses: "text-white/95"
               },
               {
-                icon: <Globe size={32} />,
+                icon: <Globe size={24} />,
                 title: "Spread Awareness",
                 desc: "Use your voice to amplify ours. Share our mission, tell our stories, and inspire others to stand with us.",
-                color: "bg-persian-blue",
                 link: "/contact-us",
-                isExternal: false
+                isExternal: false,
+                cardClasses: "bg-persian-blue text-white",
+                iconClasses: "p-2 text-white",
+                buttonClasses: "bg-white text-persian-blue hover:bg-gray-100",
+                descClasses: "text-white/95"
               }
             ].map((item, idx) => (
               <motion.div 
                 key={idx}
                 variants={fadeUp}
-                className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all border border-gray-100 group hover:-translate-y-2"
+                className={`rounded-[2rem] p-8 lg:p-10 shadow-sm hover:shadow-md transition-all flex flex-col h-full group ${item.cardClasses}`}
               >
-                <div className={`w-16 h-16 rounded-2xl ${item.color} text-white flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  {item.icon}
+                <div className="flex justify-between items-start mb-8">
+                  <h3 className="text-2xl font-bold tracking-tight">{item.title}</h3>
+                  <div className={`flex items-center justify-center shrink-0 ${item.iconClasses}`}>
+                    {item.icon}
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{item.title}</h3>
-                <p className="text-gray-600 mb-8 leading-relaxed">{item.desc}</p>
+                <div className="flex-grow mb-10">
+                  <p className={`leading-relaxed text-base ${item.descClasses}`}>{item.desc}</p>
+                </div>
                 {item.isExternal ? (
-                  <a href={item.link} target="_blank" rel="noreferrer" className={`inline-flex items-center gap-2 font-bold ${item.color === 'bg-orioles-orange' ? 'text-orioles-orange' : 'text-ultra-violet'} group-hover:gap-3 transition-all`} data-testid={`button-help-${idx}`}>
-                    Take Action <ArrowRight size={18} />
+                  <a href={item.link} target="_blank" rel="noreferrer" className={`block w-full py-4 text-center font-bold rounded-xl transition-colors ${item.buttonClasses}`} data-testid={`button-help-${idx}`}>
+                    Take Action
                   </a>
                 ) : (
-                  <Link href={item.link} className={`inline-flex items-center gap-2 font-bold ${item.color === 'bg-orioles-orange' ? 'text-orioles-orange' : 'text-ultra-violet'} group-hover:gap-3 transition-all`} data-testid={`link-help-${idx}`}>
-                    Take Action <ArrowRight size={18} />
+                  <Link href={item.link} className={`block w-full py-4 text-center font-bold rounded-xl transition-colors ${item.buttonClasses}`} data-testid={`link-help-${idx}`}>
+                    Take Action
                   </Link>
                 )}
               </motion.div>
