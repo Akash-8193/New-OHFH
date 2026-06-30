@@ -3,23 +3,17 @@ import { motion } from 'framer-motion';
 import { Shield, Brain, Heart, Activity, Stethoscope, HeartPulse, ArrowRight } from 'lucide-react';
 import { Link } from 'wouter';
 import MagneticButton from '@/components/ui/MagneticButton';
+import Hero from '@/components/ui/Hero';
 
 const Workshop = () => {
   return (
     <div className="w-full bg-white">
-      {/* Hero */}
-      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden bg-ultra-violet">
-        <div className="absolute inset-0">
-          <img src="/src/assets/images/hero-workshop.png" alt="Workshops" className="w-full h-full object-cover opacity-40 mix-blend-overlay" />
-        </div>
-        <div className="relative z-10 text-center px-4">
-          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }}>
-            <span className="text-bright-lime font-bold tracking-widest uppercase text-sm mb-4 block">Our Projects</span>
-            <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6">Workshop</h1>
-            <p className="text-xl text-white/90 font-medium">Empowering Through Workshops</p>
-          </motion.div>
-        </div>
-      </section>
+      <Hero 
+        title="Workshop" 
+        imageSrc="/src/assets/images/hero-workshop.png" 
+        overlayColor="bg-ultra-violet"
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Workshop' }]} 
+      />
 
       {/* Intro */}
       <section className="py-20">

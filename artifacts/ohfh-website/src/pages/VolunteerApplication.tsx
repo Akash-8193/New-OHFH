@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { toast } from '@/hooks/use-toast';
+import Hero from '@/components/ui/Hero';
 
 const formSchema = z.object({
   firstName: z.string().min(2, "Required"),
@@ -23,6 +24,9 @@ const formSchema = z.object({
   gender: z.enum(["Male", "Female"], { required_error: "Please select a gender" }),
   aadharNo: z.string().min(12, "Valid Aadhar required"),
   courses: z.string().min(2, "Please specify courses/interests"),
+  availability: z.string().min(2, "Please specify your availability"),
+  commitHours: z.string().min(1, "Please specify your commitment"),
+  whyVolunteer: z.string().min(10, "Please briefly explain why you want to join"),
 });
 
 const VolunteerApplication = () => {
@@ -33,12 +37,16 @@ const VolunteerApplication = () => {
       lastName: "",
       phoneNo: "",
       email: "",
+      ageGroup: "",
       address: "",
       city: "",
       state: "",
       zipCode: "",
       aadharNo: "",
       courses: "",
+      availability: "",
+      commitHours: "",
+      whyVolunteer: "",
     },
   });
 
@@ -52,26 +60,15 @@ const VolunteerApplication = () => {
   };
 
   return (
-    <div className="w-full bg-gray-50 min-h-screen pb-24">
-      {/* Hero */}
-      <section className="relative py-24 bg-ultra-violet text-center mb-12">
-        <div className="container mx-auto px-4">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-serif font-bold text-white mb-4"
-          >
-            Be the Change
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
-            className="text-xl text-bright-lime font-medium"
-          >
-            Volunteer & Become a Member
-          </motion.p>
-        </div>
-      </section>
-
-      <div className="container mx-auto px-4 max-w-4xl">
+    <div className="w-full bg-gray-50 min-h-screen">
+      <Hero 
+        title="Volunteer With Us" 
+        imageSrc="/src/assets/images/about-hero.png" 
+        overlayColor="bg-ultra-violet"
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Volunteer' }]} 
+      />
+      <div className="py-20">
+        <div className="container mx-auto px-4 max-w-4xl">
         <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-serif font-bold text-gray-900 mb-2">Volunteer Application</h2>
@@ -174,6 +171,7 @@ const VolunteerApplication = () => {
           </Form>
 
         </div>
+      </div>
       </div>
     </div>
   );

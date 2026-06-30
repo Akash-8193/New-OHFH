@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Calendar } from 'lucide-react';
 import { Link } from 'wouter';
+import Hero from '@/components/ui/Hero';
 
 // A subset of posts to demonstrate the layout without making the file massive
 const blogPosts = [
@@ -30,12 +31,13 @@ const blogPosts = [
 const Blog = () => {
   return (
     <div className="w-full bg-gray-50 min-h-screen">
-      <section className="py-24 bg-ultra-violet text-center">
-        <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-4">Blog</h1>
-        <p className="text-xl text-bright-lime font-medium">Stories of Impact</p>
-      </section>
-
-      <section className="py-24">
+      <Hero 
+        title="Our Latest Articles" 
+        imageSrc="/src/assets/images/blog_hero.png" 
+        overlayColor="bg-ultra-violet"
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Blog' }]} 
+      />
+      <section className="py-20 px-4">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, idx) => (

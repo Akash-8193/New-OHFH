@@ -1,28 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen, Users, Hammer, ArrowRight } from 'lucide-react';
+import { BookOpen, Users, Hammer, ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from 'wouter';
+import Hero from '@/components/ui/Hero';
 
 const About = () => {
   return (
     <div className="w-full">
-      {/* Hero */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden mt-[80px]">
-        <div className="absolute inset-0">
-          <img src="/src/assets/images/about-hero.png" alt="Community hope scene" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-ultra-violet/70 mix-blend-multiply"></div>
-        </div>
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-serif font-bold text-white mb-6"
-          >
-            About Us
-          </motion.h1>
-        </div>
-      </section>
+      <Hero 
+        title="About Us" 
+        imageSrc="/src/assets/images/about-hero.png" 
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About Us' }]} 
+      />
 
       {/* Intro / CTA Section (New Design) */}
       {/* Intro / CTA Section (New Design) */}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Hero from '@/components/ui/Hero';
 
 const teamMembers = [
   {
@@ -60,10 +61,21 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="w-full bg-white">
-      <section className="py-20 bg-ultra-violet text-center">
-        <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-4">EXPERT TEAM</h1>
-        <p className="text-xl text-bright-lime font-medium">Meet Our Volunteer Team</p>
+    <div className="w-full bg-white min-h-screen">
+      <Hero 
+        title="Our Team" 
+        imageSrc="/src/assets/images/team_hero.png" 
+        overlayColor="bg-ultra-violet"
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Our Team' }]} 
+      />
+
+      {/* Intro */}
+      <section className="py-20 text-center px-4">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600">
+            Meet the dedicated individuals who make our mission possible.
+          </p>
+        </div>
       </section>
 
       <section className="py-24">

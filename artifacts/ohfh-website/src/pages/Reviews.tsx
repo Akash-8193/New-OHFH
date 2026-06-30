@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Quote, Star } from 'lucide-react';
-import { Link } from 'wouter';
+import Hero from '@/components/ui/Hero';
 
 const reviewsData = [
   {
@@ -41,36 +41,12 @@ const reviewsData = [
 const Reviews = () => {
   return (
     <div className="w-full bg-gray-50 min-h-screen">
-      
-      {/* Cinematic Hero Section */}
-      <section className="relative w-full py-40 flex items-center justify-center overflow-hidden bg-ultra-violet">
-        {/* Background Image & Overlay */}
-        <div className="absolute inset-0 z-0">
-          <img src="/src/assets/images/reviews_hero.png" alt="Community Reviews" className="w-full h-full object-cover opacity-90" />
-          <div className="absolute inset-0 bg-ultra-violet/50 mix-blend-multiply"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-ultra-violet/70 to-transparent"></div>
-        </div>
-        
-        <div className="relative z-10 text-center px-4 w-full flex flex-col items-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-            className="text-5xl md:text-[80px] font-bold text-white mb-6 tracking-tight leading-none"
-          >
-            Reviews
-          </motion.h1>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col items-center gap-4"
-          >
-            <p className="text-xl md:text-2xl text-bright-lime font-medium mb-2">What our community says about us</p>
-            <div className="flex items-center gap-2 text-white/90 text-lg font-medium">
-              <Link href="/" className="hover:text-bright-lime transition-colors">Home</Link>
-              <span>/</span>
-              <span className="text-bright-lime">Reviews</span>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <Hero 
+        title="Reviews" 
+        imageSrc="/src/assets/images/reviews_hero.png" 
+        overlayColor="bg-ultra-violet"
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Reviews' }]} 
+      />
 
       <section className="py-24">
         <div className="container mx-auto px-4 max-w-6xl">

@@ -10,6 +10,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { toast } from '@/hooks/use-toast';
 import { Link } from 'wouter';
+import Hero from '@/components/ui/Hero';
 
 const formSchema = z.object({
   firstName: z.string().min(2, "Required"),
@@ -49,31 +50,12 @@ const Contact = () => {
   return (
     <div className="w-full bg-white font-sans">
       
-      {/* 1. Hero Section */}
-      <section className="relative w-full py-40 flex items-center justify-center overflow-hidden bg-[#0F352E]">
-        {/* Background Image & Overlay */}
-        <div className="absolute inset-0 z-0">
-          <img src="/src/assets/images/contact_hero.png" alt="Contact Hero" className="w-full h-full object-cover opacity-90" />
-          <div className="absolute inset-0 bg-[#0F352E]/50 mix-blend-multiply"></div>
-        </div>
-        
-        <div className="relative z-10 text-center px-4 w-full flex flex-col items-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-            className="text-5xl md:text-[80px] font-bold text-white mb-6 tracking-tight leading-none"
-          >
-            Contact us
-          </motion.h1>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex items-center gap-2 text-white/90 text-lg font-medium"
-          >
-            <Link href="/" className="hover:text-[#FFD166] transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-[#FFD166]">Contact Us</span>
-          </motion.div>
-        </div>
-      </section>
+      <Hero 
+        title="Contact us" 
+        imageSrc="/src/assets/images/contact_hero.png" 
+        overlayColor="bg-[#0F352E]"
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Contact Us' }]} 
+      />
 
       {/* Yellow Ticker */}
       <div className="w-full bg-[#F4D35E] overflow-hidden flex py-4 border-b-4 border-[#e3c456]">

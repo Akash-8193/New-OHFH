@@ -109,6 +109,22 @@ const Home = () => {
             </motion.div>
           </motion.div>
         </div>
+
+        {/* Premium Scroll Down Icon */}
+        <motion.div 
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 cursor-pointer flex flex-col items-center gap-3 text-white/70 hover:text-white transition-colors group"
+          onClick={() => window.scrollBy({ top: window.innerHeight * 0.9, behavior: 'smooth' })}
+        >
+          <span className="text-xs font-bold tracking-[0.2em] uppercase">Scroll</span>
+          <div className="w-7 h-12 border-2 border-current rounded-full flex justify-center pt-2">
+            <motion.div 
+              animate={{ y: [0, 15, 0], opacity: [1, 0, 1] }} 
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              className="w-1.5 h-3 bg-current rounded-full"
+            />
+          </div>
+        </motion.div>
       </section>
 
       {/* About Section */}

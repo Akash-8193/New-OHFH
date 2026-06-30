@@ -3,22 +3,17 @@ import { motion } from 'framer-motion';
 import { Utensils, BookOpen, Users, Heart, ArrowRight } from 'lucide-react';
 import MagneticButton from '@/components/ui/MagneticButton';
 import AnimatedCounter from '@/components/ui/AnimatedCounter';
+import Hero from '@/components/ui/Hero';
 
 const MiddayMeals = () => {
   return (
     <div className="w-full bg-white">
-      {/* Hero */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-ultra-violet">
-        <div className="absolute inset-0">
-          <img src="/src/assets/images/hero-meals.png" alt="Midday Meals" className="w-full h-full object-cover opacity-40 mix-blend-overlay" />
-        </div>
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-6">Midday Meals</h1>
-            <p className="text-2xl text-bright-lime font-medium italic">"Be the reason someone smiles, learns, eats, and rises."</p>
-          </motion.div>
-        </div>
-      </section>
+      <Hero 
+        title="Midday Meals" 
+        imageSrc="/src/assets/images/hero-meals.png" 
+        overlayColor="bg-ultra-violet"
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Midday Meals' }]} 
+      />
 
       {/* Content Sections */}
       <section className="py-20">
