@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="w-full">
       {/* Hero */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden mt-[80px]">
         <div className="absolute inset-0">
           <img src="/src/assets/images/about-hero.png" alt="Community hope scene" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-ultra-violet/70 mix-blend-multiply"></div>
@@ -19,31 +19,89 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-6xl font-serif font-bold text-white mb-6"
           >
-            Be the Hand That <br/> Brings Happiness
+            About Us
           </motion.h1>
         </div>
       </section>
 
-      {/* Intro */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-2xl text-gray-700 leading-relaxed font-serif italic mb-8"
-          >
-            "Every day, millions wake up to hunger, struggle, and uncertainty—yet, they also wake up with hope. Hope that someone, somewhere, will reach out and change their story."
-          </motion.p>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-lg text-gray-600 leading-relaxed"
-          >
-            At One Hand For Happiness, we believe that real change begins with dignity, empowerment, and opportunity—not just charity. We are here to transform lives, not with temporary relief, but with long-term solutions that rebuild futures. Because true impact is not measured by what we give, but by how many lives we help stand on their own.
-          </motion.p>
+      {/* Intro / CTA Section (New Design) */}
+      {/* Intro / CTA Section (New Design) */}
+      <section className="py-24 bg-white relative overflow-hidden font-sans">
+        
+        <div className="container mx-auto px-4 max-w-7xl relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-8">
+            
+            {/* Left side text */}
+            <div className="w-full lg:w-[55%]">
+              
+              {/* Tag */}
+              <motion.div variants={{hidden: {opacity: 0, y: 20}, show: {opacity: 1, y: 0}}} initial="hidden" animate="show" transition={{duration: 0.5}} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#f8f9fa] mb-6 shadow-sm border border-gray-100">
+                 <span className="text-orioles-orange text-lg leading-none font-bold">+</span> 
+                 <span className="text-xs font-bold text-gray-800 tracking-wide uppercase">Get Started Today</span>
+              </motion.div>
+              
+              {/* Heading */}
+              <motion.h1 variants={{hidden: {opacity: 0, y: 20}, show: {opacity: 1, y: 0}}} initial="hidden" animate="show" transition={{duration: 0.5, delay: 0.1}} className="text-[40px] md:text-[50px] lg:text-[56px] font-sans font-extrabold text-[#0c2444] leading-[1.1] tracking-tight mb-6">
+                Be the Hand That Brings Happiness
+              </motion.h1>
+
+              <motion.p variants={{hidden: {opacity: 0, y: 20}, show: {opacity: 1, y: 0}}} initial="hidden" animate="show" transition={{duration: 0.5, delay: 0.2}} className="text-[17px] text-gray-500 leading-relaxed font-medium mb-12 max-w-[95%]">
+                Every day, millions wake up to hunger, struggle, and uncertainty—yet, they also wake up with hope. Hope that someone, somewhere, will reach out and change their story.
+              </motion.p>
+              
+              <motion.div variants={{hidden: {opacity: 0, y: 20}, show: {opacity: 1, y: 0}}} initial="hidden" animate="show" transition={{duration: 0.5, delay: 0.3}} className="space-y-10 mb-12">
+                <div className="flex gap-6 items-start">
+                  <div className="w-14 h-14 rounded-full bg-[#f8f9fa] border border-gray-100 shadow-sm flex items-center justify-center shrink-0">
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-orioles-orange"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-[#0c2444] mb-2">Real Change & Empowerment</h3>
+                    <p className="text-gray-500 text-[15px] leading-relaxed max-w-[95%] font-medium">
+                      At One Hand For Happiness, we believe that real change begins with dignity, empowerment, and opportunity—not just charity.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex gap-6 items-start">
+                  <div className="w-14 h-14 rounded-full bg-[#f8f9fa] border border-gray-100 shadow-sm flex items-center justify-center shrink-0">
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-orioles-orange"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-[#0c2444] mb-2">Long-term Solutions</h3>
+                    <p className="text-gray-500 text-[15px] leading-relaxed max-w-[95%] font-medium">
+                      We are here to transform lives, not with temporary relief, but with long-term solutions that rebuild futures. Because true impact is not measured by what we give, but by how many lives we help stand on their own.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+              
+              <motion.div variants={{hidden: {opacity: 0, y: 20}, show: {opacity: 1, y: 0}}} initial="hidden" animate="show" transition={{duration: 0.5, delay: 0.4}}>
+                <Link href="/contact-us" className="inline-flex items-center gap-2 bg-[#f94a13] text-white px-8 py-3.5 rounded-full text-[16px] font-bold hover:bg-[#e03d0b] transition-all shadow-md">
+                  Get Started <ArrowRight size={18} />
+                </Link>
+              </motion.div>
+            </div>
+
+            {/* Right Column (Image) */}
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}
+              className="w-full lg:w-[45%] flex justify-center lg:justify-end mt-12 lg:mt-0 relative"
+            >
+               <div className="relative inline-block w-full max-w-[600px]">
+                 <img src="/src/assets/images/cta-box-image.png" alt="Children holding sign" className="w-full h-auto object-contain drop-shadow-2xl" />
+                 
+                 {/* Text Overlay on Cardboard (with background patch to hide old text) */}
+                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none" style={{ paddingTop: '34%', paddingLeft: '2%' }}>
+                   <div className="transform rotate-[2deg] text-center w-[58%] bg-[#e4d3bc] py-2 px-1 rounded-sm" style={{ boxShadow: '0 0 8px 4px #e4d3bc' }}>
+                     <h3 className="text-[#102b4e] text-[18px] md:text-[24px] lg:text-[28px] font-extrabold leading-snug font-sans tracking-tight opacity-90 mix-blend-multiply">
+                       Your Support Can <br/> Transform a Life!
+                     </h3>
+                   </div>
+                 </div>
+               </div>
+            </motion.div>
+
+          </div>
         </div>
       </section>
 
