@@ -117,16 +117,16 @@ const MiddayMeals = () => {
           <p className="text-xl text-white/90 mb-16 max-w-2xl mx-auto">Choose an amount to donate and directly fund our midday meal program.</p>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <a href="https://payu.in/web/71BA0B5FD4AF73520DCFF0DE3AE2899C" target="_blank" rel="noreferrer" className="bg-orioles-orange text-white py-8 rounded-3xl font-bold text-2xl shadow-lg hover:-translate-y-2 transition-transform hover:shadow-2xl">
+            <a href="#" onClick={(e) => e.preventDefault()} className="bg-orioles-orange text-white py-8 rounded-3xl font-bold text-2xl shadow-lg hover:-translate-y-2 transition-transform hover:shadow-2xl">
               Rs 100
             </a>
-            <a href="https://payu.in/web/69A31AC60C2A20BC631A1C5659E810B2" target="_blank" rel="noreferrer" className="bg-orioles-orange text-white py-8 rounded-3xl font-bold text-2xl shadow-lg hover:-translate-y-2 transition-transform hover:shadow-2xl">
+            <a href="#" onClick={(e) => e.preventDefault()} className="bg-orioles-orange text-white py-8 rounded-3xl font-bold text-2xl shadow-lg hover:-translate-y-2 transition-transform hover:shadow-2xl">
               Rs 200
             </a>
-            <a href="https://payu.in/web/A3853A96D0B533F1921987736B5567A4" target="_blank" rel="noreferrer" className="bg-orioles-orange text-white py-8 rounded-3xl font-bold text-2xl shadow-lg hover:-translate-y-2 transition-transform hover:shadow-2xl">
+            <a href="#" onClick={(e) => e.preventDefault()} className="bg-orioles-orange text-white py-8 rounded-3xl font-bold text-2xl shadow-lg hover:-translate-y-2 transition-transform hover:shadow-2xl">
               Rs 500
             </a>
-            <a href="https://payu.in/web/8E1D1BEA3191C515ABAE239FD430C652" target="_blank" rel="noreferrer" className="bg-orioles-orange text-white py-8 rounded-3xl font-bold text-2xl shadow-lg hover:-translate-y-2 transition-transform hover:shadow-2xl">
+            <a href="#" onClick={(e) => e.preventDefault()} className="bg-orioles-orange text-white py-8 rounded-3xl font-bold text-2xl shadow-lg hover:-translate-y-2 transition-transform hover:shadow-2xl">
               Rs 1000
             </a>
           </div>
