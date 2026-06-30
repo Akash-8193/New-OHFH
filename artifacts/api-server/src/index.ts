@@ -1,7 +1,8 @@
 import app from "./app";
 import { logger } from "./lib/logger";
 
-const port = process.env["PORT"] || 5000;
+const rawPort = process.env["PORT"] || "5000";
+const port = isNaN(Number(rawPort)) ? rawPort : Number(rawPort);
 
 app.listen(port, (err?: any) => {
   if (err) {
