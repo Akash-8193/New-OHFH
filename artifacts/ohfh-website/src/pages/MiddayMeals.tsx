@@ -4,6 +4,7 @@ import { Utensils, BookOpen, Users, Heart, ArrowRight } from 'lucide-react';
 import MagneticButton from '@/components/ui/MagneticButton';
 import AnimatedCounter from '@/components/ui/AnimatedCounter';
 import Hero from '@/components/ui/Hero';
+import SplitTextReveal from '@/components/ui/SplitTextReveal';
 
 const MiddayMeals = () => {
   return (
@@ -25,7 +26,9 @@ const MiddayMeals = () => {
               <div className="w-16 h-16 bg-orioles-orange/10 text-orioles-orange rounded-2xl flex items-center justify-center mb-6">
                 <Utensils size={32} />
               </div>
-              <h2 className="text-3xl font-serif font-bold text-ultra-violet mb-4">Midday Meals in Schools</h2>
+              <div className="text-3xl font-serif font-bold text-ultra-violet mb-4">
+                <SplitTextReveal text="Midday Meals in Schools" />
+              </div>
               <p className="text-gray-600 leading-relaxed mb-6">
                 For many children, the meal they receive at school is not just lunch—it is their only meal of the day. At One Hand For Happiness, we provide nutritious midday meals during recess, ensuring hunger does not hinder learning.
               </p>
@@ -37,7 +40,7 @@ const MiddayMeals = () => {
               </div>
             </motion.div>
             <div className="flex-1 w-full aspect-video rounded-3xl overflow-hidden shadow-xl">
-              <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=1600" alt="Children eating" className="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=1600" alt="Children eating" className="image-anime w-full h-full object-cover" />
             </div>
           </div>
 
@@ -47,7 +50,9 @@ const MiddayMeals = () => {
               <div className="w-16 h-16 bg-persian-blue/10 text-persian-blue rounded-2xl flex items-center justify-center mb-6">
                 <BookOpen size={32} />
               </div>
-              <h2 className="text-3xl font-serif font-bold text-ultra-violet mb-4">Educating Children</h2>
+              <div className="text-3xl font-serif font-bold text-ultra-violet mb-4">
+                <SplitTextReveal text="Educating Children" />
+              </div>
               <p className="text-gray-600 leading-relaxed mb-6">
                 Imagine a world where a child's dreams end because of an empty stomach or a torn uniform. For many of the 500+ children we have supported, that was once their reality.
               </p>
@@ -56,7 +61,7 @@ const MiddayMeals = () => {
               </p>
             </motion.div>
             <div className="flex-1 w-full aspect-video rounded-3xl overflow-hidden shadow-xl">
-              <img src="/src/assets/images/education_program.png" alt="Children studying" className="w-full h-full object-cover" />
+              <img src="/src/assets/images/education_program.png" alt="Children studying" className="image-anime w-full h-full object-cover" />
             </div>
           </div>
 
@@ -66,7 +71,9 @@ const MiddayMeals = () => {
               <div className="w-16 h-16 bg-bright-lime/20 text-lime-700 rounded-2xl flex items-center justify-center mb-6">
                 <Users size={32} />
               </div>
-              <h2 className="text-3xl font-serif font-bold text-ultra-violet mb-4">Empowering Women</h2>
+              <div className="text-3xl font-serif font-bold text-ultra-violet mb-4">
+                <SplitTextReveal text="Empowering Women" />
+              </div>
               <p className="text-gray-600 leading-relaxed mb-6">
                 We have trained and uplifted over 150 women who once felt invisible, unskilled, and voiceless. Through skill development in tailoring, handicrafts, and other sustainable trades, these women are now earning with dignity, feeding their families, and walking with confidence.
               </p>
@@ -75,7 +82,7 @@ const MiddayMeals = () => {
               </p>
             </motion.div>
             <div className="flex-1 w-full aspect-video rounded-3xl overflow-hidden shadow-xl">
-              <img src="/src/assets/images/women_emp_impact.png" alt="Women working" className="w-full h-full object-cover" />
+              <img src="/src/assets/images/women_emp_impact.png" alt="Women working" className="image-anime w-full h-full object-cover" />
             </div>
           </div>
 
@@ -85,7 +92,9 @@ const MiddayMeals = () => {
               <div className="w-16 h-16 bg-red-100 text-red-500 rounded-2xl flex items-center justify-center mb-6">
                 <Heart size={32} />
               </div>
-              <h2 className="text-3xl font-serif font-bold text-ultra-violet mb-4">Nourishing Lives</h2>
+              <div className="text-3xl font-serif font-bold text-ultra-violet mb-4">
+                <SplitTextReveal text="Nourishing Lives" />
+              </div>
               <p className="text-gray-600 leading-relaxed mb-6">
                 Hunger is not just about food, it is about survival, dignity, and hope. Over 100,000 meals have been served through our efforts. We feed children in schools, families in slums, and those forgotten in society's corners.
               </p>
@@ -94,7 +103,7 @@ const MiddayMeals = () => {
               </p>
             </motion.div>
             <div className="flex-1 w-full aspect-video rounded-3xl overflow-hidden shadow-xl">
-              <img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?auto=format&fit=crop&q=80&w=1600" alt="Nourishing lives" className="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?auto=format&fit=crop&q=80&w=1600" alt="Nourishing lives" className="image-anime w-full h-full object-cover" />
             </div>
           </div>
 

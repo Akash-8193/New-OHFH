@@ -3,6 +3,10 @@ import { motion } from 'framer-motion';
 import { BookOpen, Users, Hammer, ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from 'wouter';
 import Hero from '@/components/ui/Hero';
+import SplitTextReveal from '@/components/ui/SplitTextReveal';
+import CurtainReveal from '@/components/ui/CurtainReveal';
+import ScrollReveal from '@/components/ui/ScrollReveal';
+import Typewriter from '@/components/ui/Typewriter';
 
 const About = () => {
   return (
@@ -26,17 +30,17 @@ const About = () => {
               {/* Tag */}
               <motion.div variants={{hidden: {opacity: 0, y: 20}, show: {opacity: 1, y: 0}}} initial="hidden" animate="show" transition={{duration: 0.5}} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#f8f9fa] mb-6 shadow-sm border border-gray-100">
                  <span className="text-orioles-orange text-lg leading-none font-bold">+</span> 
-                 <span className="text-xs font-bold text-gray-800 tracking-wide uppercase">Get Started Today</span>
+                 <span className="text-xs font-bold text-gray-800 tracking-wide uppercase"><Typewriter text="Get Started Today" delay={300} /></span>
               </motion.div>
               
               {/* Heading */}
-              <motion.h1 variants={{hidden: {opacity: 0, y: 20}, show: {opacity: 1, y: 0}}} initial="hidden" animate="show" transition={{duration: 0.5, delay: 0.1}} className="text-[40px] md:text-[50px] lg:text-[56px] font-sans font-extrabold text-[#0c2444] leading-[1.1] tracking-tight mb-6">
-                Be the Hand That Brings Happiness
-              </motion.h1>
+              <div className="text-[40px] md:text-[50px] lg:text-[56px] font-sans font-extrabold text-[#0c2444] leading-[1.1] tracking-tight mb-6">
+                <SplitTextReveal text="Be the Hand That Brings Happiness" stagger={0.03} />
+              </div>
 
-              <motion.p variants={{hidden: {opacity: 0, y: 20}, show: {opacity: 1, y: 0}}} initial="hidden" animate="show" transition={{duration: 0.5, delay: 0.2}} className="text-[17px] text-gray-500 leading-relaxed font-medium mb-12 max-w-[95%]">
+              <ScrollReveal direction="up" delay={0.2} className="text-[17px] text-gray-500 leading-relaxed font-medium mb-12 max-w-[95%]">
                 Every day, millions wake up to hunger, struggle, and uncertainty—yet, they also wake up with hope. Hope that someone, somewhere, will reach out and change their story.
-              </motion.p>
+              </ScrollReveal>
               
               <motion.div variants={{hidden: {opacity: 0, y: 20}, show: {opacity: 1, y: 0}}} initial="hidden" animate="show" transition={{duration: 0.5, delay: 0.3}} className="space-y-10 mb-12">
                 <div className="flex gap-6 items-start">
@@ -64,11 +68,11 @@ const About = () => {
                 </div>
               </motion.div>
               
-              <motion.div variants={{hidden: {opacity: 0, y: 20}, show: {opacity: 1, y: 0}}} initial="hidden" animate="show" transition={{duration: 0.5, delay: 0.4}}>
-                <Link href="/contact-us" className="inline-flex items-center gap-2 bg-[#f94a13] text-white px-8 py-3.5 rounded-full text-[16px] font-bold hover:bg-[#e03d0b] transition-all shadow-md">
-                  Get Started <ArrowRight size={18} />
+              <ScrollReveal direction="up" delay={0.4}>
+                <Link href="/contact-us" className="btn-skew inline-flex items-center gap-2 bg-[#f94a13] text-white px-8 py-3.5 rounded-full text-[16px] font-bold hover:bg-[#e03d0b] transition-all shadow-md border-0">
+                  Get Started <ArrowRight size={18} className="relative z-10" />
                 </Link>
-              </motion.div>
+              </ScrollReveal>
             </div>
 
             {/* Right Column (Image) */}
@@ -77,7 +81,9 @@ const About = () => {
               className="w-full lg:w-[45%] flex justify-center lg:justify-end mt-12 lg:mt-0 relative"
             >
                <div className="relative inline-block w-full max-w-[600px]">
-                 <img src="/src/assets/images/cta-box-image.png" alt="Children holding sign" className="w-full h-auto object-contain drop-shadow-2xl" />
+                 <CurtainReveal>
+                   <img src="/src/assets/images/cta-box-image.png" alt="Children holding sign" className="image-anime w-full h-auto object-contain drop-shadow-2xl" />
+                 </CurtainReveal>
                  
                  {/* Text Overlay on Cardboard (with background patch to hide old text) */}
                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none" style={{ paddingTop: '34%', paddingLeft: '2%' }}>

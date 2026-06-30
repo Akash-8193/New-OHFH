@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import Header from './Header';
 import Footer from './Footer';
+import MagicCursor from '../ui/MagicCursor';
 
 interface PageLayoutProps {
   children: ReactNode;
@@ -10,6 +11,7 @@ interface PageLayoutProps {
 const PageLayout = ({ children }: PageLayoutProps) => {
   return (
     <div className="flex flex-col min-h-screen pt-[104px]">
+      <MagicCursor />
       <Header />
       <motion.main 
         className="flex-grow"

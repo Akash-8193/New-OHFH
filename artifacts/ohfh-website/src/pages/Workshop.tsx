@@ -4,6 +4,9 @@ import { Shield, Brain, Heart, Activity, Stethoscope, HeartPulse, ArrowRight, Za
 import { Link } from 'wouter';
 import MagneticButton from '@/components/ui/MagneticButton';
 import Hero from '@/components/ui/Hero';
+import SplitTextReveal from '@/components/ui/SplitTextReveal';
+import ScrollReveal from '@/components/ui/ScrollReveal';
+import Typewriter from '@/components/ui/Typewriter';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -26,15 +29,15 @@ const Workshop = () => {
         <div className="container mx-auto px-4 max-w-5xl text-center relative z-10">
           <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 shadow-sm mb-8">
             <Zap className="text-orioles-orange" size={16} />
-            <span className="text-sm font-bold tracking-wide text-[#0c2444] uppercase">Empowerment Through Education</span>
+            <span className="text-sm font-bold tracking-wide text-[#0c2444] uppercase"><Typewriter text="Empowerment Through Education" delay={300} speed={40} /></span>
           </motion.div>
-          <motion.h2 variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="text-4xl md:text-5xl font-serif font-bold text-[#0c2444] leading-tight mb-8">
-            Nurturing Minds & Bodies for a <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orioles-orange to-[#0c2444]">Brighter Tomorrow</span>
-          </motion.h2>
-          <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} transition={{ delay: 0.1 }} className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto font-medium">
+          <div className="text-4xl md:text-5xl font-serif font-bold text-[#0c2444] leading-tight mb-8">
+            <SplitTextReveal text="Nurturing Minds & Bodies for a" /> <br />
+            <SplitTextReveal text="Brighter Tomorrow" className="text-transparent bg-clip-text bg-gradient-to-r from-orioles-orange to-[#0c2444]" stagger={0.03} />
+          </div>
+          <ScrollReveal direction="up" delay={0.2} className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto font-medium">
             At One Hand For Happiness, our workshops are thoughtfully designed to equip children and women with essential skills, knowledge, and awareness—fostering holistic development and complete empowerment.
-          </motion.p>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -159,9 +162,9 @@ const Workshop = () => {
             </div>
 
             <div className="order-1 lg:order-2">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-8">
-                A Tailored <span className="text-bright-lime">Approach</span>
-              </h2>
+              <div className="text-4xl md:text-5xl font-serif font-bold text-white mb-8">
+                <SplitTextReveal text="A Tailored" /> <SplitTextReveal text="Approach" className="text-bright-lime" stagger={0.05} />
+              </div>
               <p className="text-xl text-white/70 leading-relaxed mb-10">
                 Each workshop is thoughtfully designed to suit the age, background, and specific needs of the children we serve. Our diverse team of educators, trainers, healthcare professionals, and industry experts bring their skills, compassion, and experience into every session.
               </p>

@@ -11,6 +11,10 @@ import { Button } from '@/components/ui/button';
 import { toast } from '@/hooks/use-toast';
 import { Link } from 'wouter';
 import Hero from '@/components/ui/Hero';
+import SplitTextReveal from '@/components/ui/SplitTextReveal';
+import CurtainReveal from '@/components/ui/CurtainReveal';
+import ScrollReveal from '@/components/ui/ScrollReveal';
+import Typewriter from '@/components/ui/Typewriter';
 
 const formSchema = z.object({
   firstName: z.string().min(2, "Required"),
@@ -136,14 +140,16 @@ const Contact = () => {
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             
             {/* Left Image */}
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="w-full lg:w-5/12 h-[600px]">
-              <img src="/src/assets/images/contact_form.png" alt="Volunteer" className="w-full h-full object-cover rounded-[2rem]" />
-            </motion.div>
+            <div className="w-full lg:w-5/12 h-[600px] rounded-[2rem] overflow-hidden">
+              <CurtainReveal>
+                <img src="/src/assets/images/contact_form.png" alt="Volunteer" className="image-anime w-full h-full object-cover" />
+              </CurtainReveal>
+            </div>
 
             {/* Right Form */}
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="w-full lg:w-7/12">
-              <h2 className="text-[17px] text-gray-700 font-medium leading-relaxed mb-10 max-w-2xl">
-                We'd love to hear from you! Whether you want to volunteer, support our programs, or learn more about our initiatives.
+              <h2 className="text-[17px] text-gray-700 font-medium leading-relaxed mb-10 max-w-2xl min-h-[50px]">
+                <Typewriter text="We'd love to hear from you! Whether you want to volunteer, support our programs, or learn more about our initiatives." speed={30} delay={300} />
               </h2>
 
               <Form {...form}>
@@ -202,7 +208,7 @@ const Contact = () => {
                   )} />
 
                   <div className="pt-2">
-                    <Button type="submit" className="bg-[#f94a13] hover:bg-[#e03d0b] text-white font-bold text-[16px] px-8 py-7 rounded-xl transition-all shadow-lg">
+                    <Button type="submit" className="btn-skew bg-[#f94a13] hover:bg-[#e03d0b] text-white font-bold text-[16px] px-8 py-7 rounded-xl transition-all shadow-lg border-0">
                       Submit Message
                     </Button>
                   </div>
@@ -220,11 +226,11 @@ const Contact = () => {
             <div className="w-1.5 h-1.5 rounded-full bg-[#f94a13]"></div>
             <span className="text-[13px] font-bold tracking-wide text-[#0c2444]">Our Location</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0c2444] mb-6 tracking-tight">
-            Where We Make an Impact
-          </h2>
-          <p className="text-gray-500 text-lg leading-relaxed">
-            Our offices and outreach centers are located across key regions, allowing us to connect directly with communities and deliver programs efficiently and effectively.
+          <div className="text-4xl md:text-5xl font-bold text-[#0c2444] mb-6 tracking-tight">
+            <SplitTextReveal text="Where We Make an Impact" stagger={0.03} />
+          </div>
+          <p className="text-gray-500 text-lg leading-relaxed min-h-[60px]">
+            <Typewriter text="Our offices and outreach centers are located across key regions, allowing us to connect directly with communities and deliver programs efficiently and effectively." speed={20} delay={400} />
           </p>
         </motion.div>
 

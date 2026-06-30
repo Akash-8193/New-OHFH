@@ -4,6 +4,7 @@ import { Shield, Sparkles, Users, Briefcase, ArrowRight, Heart, Star, CheckCircl
 import { Link } from 'wouter';
 import MagneticButton from '@/components/ui/MagneticButton';
 import Hero from '@/components/ui/Hero';
+import SplitTextReveal from '@/components/ui/SplitTextReveal';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -67,15 +68,15 @@ const WomenEmpowerment = () => {
               variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
               className="w-full lg:w-1/2 lg:pl-10 mt-12 lg:mt-0"
             >
-              <h2 className="text-4xl lg:text-5xl font-serif font-bold text-[#0c2444] leading-snug mb-5">
-                Empower a Woman, <span className="text-orioles-orange">Empower a Generation</span>
-              </h2>
+              <div className="text-4xl lg:text-5xl font-serif font-bold text-[#0c2444] leading-snug mb-5">
+                <SplitTextReveal text="Empower a Woman," /> <SplitTextReveal text="Empower a Generation" className="text-orioles-orange" stagger={0.03} />
+              </div>
               <div className="h-1 w-20 bg-orioles-orange mb-6 rounded-full"></div>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
                 When a woman is empowered, she uplifts her family, strengthens her community, and transforms society. Yet, many women face barriers to education, financial independence, and basic rights. At One Hand For Happiness, we are committed to breaking these barriers by providing women with the tools, resources, and support they need to thrive.
               </p>
               <MagneticButton>
-                <a href="https://razorpay.me/@onehandforhappiness" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#0c2444] text-white px-8 py-4 rounded-full font-bold text-base hover:bg-[#081a33] transition-all shadow-xl">
+                <a href="https://razorpay.me/@onehandforhappiness" target="_blank" rel="noreferrer" className="btn-skew inline-flex items-center gap-2 bg-[#0c2444] text-white px-8 py-4 rounded-full font-bold text-base hover:bg-[#081a33] transition-all shadow-xl">
                   Support the Cause <ArrowRight size={18} />
                 </a>
               </MagneticButton>

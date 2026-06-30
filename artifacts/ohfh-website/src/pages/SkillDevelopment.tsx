@@ -4,6 +4,7 @@ import { ArrowRight, BookOpen, Briefcase, Compass, ShieldCheck, Heart } from 'lu
 import { Link } from 'wouter';
 import MagneticButton from '@/components/ui/MagneticButton';
 import Hero from '@/components/ui/Hero';
+import SplitTextReveal from '@/components/ui/SplitTextReveal';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -43,14 +44,14 @@ const SkillDevelopment = () => {
               <span className="w-2 h-2 rounded-full bg-bright-lime"></span>
               <span className="text-[13px] font-bold text-gray-800 tracking-[0.1em] uppercase">Vocational Training</span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#0c2444] leading-tight mb-8">
-              Skills That Build <span className="text-orioles-orange">Independence</span>
-            </h2>
+            <div className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#0c2444] leading-tight mb-8">
+              <SplitTextReveal text="Skills That Build" /> <SplitTextReveal text="Independence" className="text-orioles-orange" stagger={0.03} />
+            </div>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-10 max-w-3xl mx-auto">
               A skill is more than just a tool for employment—it is a pathway to self-reliance, dignity, and lasting change. Millions struggle to break free from poverty due to a lack of practical opportunities. We bridge this gap by equipping individuals with the hard skills they need to build a better future.
             </p>
             <MagneticButton>
-              <a href="https://razorpay.me/@onehandforhappiness" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#0c2444] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all shadow-xl">
+              <a href="https://razorpay.me/@onehandforhappiness" target="_blank" rel="noreferrer" className="btn-skew inline-flex items-center gap-2 bg-[#0c2444] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#081a33] transition-all shadow-xl">
                 Fund a Student <ArrowRight size={20} />
               </a>
             </MagneticButton>

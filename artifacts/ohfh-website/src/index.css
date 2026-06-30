@@ -148,3 +148,58 @@
 .text-gradient-orange {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-orioles-orange to-yellow-500;
 }
+
+/* --- Impactcare Animations --- */
+
+/* Image Hover Shine */
+.image-anime {
+  position: relative;
+  overflow: hidden;
+}
+.image-anime::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 0%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%) rotate(-45deg);
+  transition: all 600ms linear;
+  z-index: 10;
+  pointer-events: none;
+}
+.image-anime:hover::after {
+  height: 250%;
+  background-color: transparent;
+}
+
+/* Button Skew + Color Wipe */
+.btn-skew {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  z-index: 1;
+}
+.btn-skew:hover {
+  transform: skew(-10deg);
+}
+.btn-skew::before, .btn-skew::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0%;
+  background-color: rgba(255,255,255,0.15);
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+}
+.btn-skew::before {
+  left: 0;
+}
+.btn-skew::after {
+  right: 0;
+}
+.btn-skew:hover::before, .btn-skew:hover::after {
+  width: 60%;
+}

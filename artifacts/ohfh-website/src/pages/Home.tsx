@@ -7,6 +7,12 @@ import AnimatedCounter from '@/components/ui/AnimatedCounter';
 import MagneticButton from '@/components/ui/MagneticButton';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
+import SplitTextReveal from '@/components/ui/SplitTextReveal';
+import Antigravity from '@/components/ui/Antigravity';
+import CurtainReveal from '@/components/ui/CurtainReveal';
+import ScrollReveal from '@/components/ui/ScrollReveal';
+import Typewriter from '@/components/ui/Typewriter';
+
 // Animation variants
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -50,7 +56,15 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[#0c2444] via-[#0c2444]/80 to-transparent w-[80%] md:w-[60%]"></div>
         </div>
 
-        <div className="w-full relative z-10 pl-2 md:pl-4 lg:pl-6 xl:pl-8">
+        {/* Floating Shapes using Antigravity */}
+        <Antigravity className="absolute top-1/4 right-1/4 z-10 hidden md:block" repelStrength={80}>
+          <div className="w-16 h-16 rounded-full border-4 border-bright-lime/20" />
+        </Antigravity>
+        <Antigravity className="absolute bottom-1/4 right-1/3 z-10 hidden md:block" speed={1.5}>
+          <div className="w-8 h-8 rotate-45 bg-orioles-orange/30" />
+        </Antigravity>
+
+        <div className="w-full relative z-20 pl-2 md:pl-4 lg:pl-6 xl:pl-8">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -65,19 +79,14 @@ const Home = () => {
               className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 lg:mb-8 shadow-sm"
             >
               <span className="text-orioles-orange text-lg leading-none font-bold">+</span>
-              <span className="text-xs font-bold text-white tracking-widest uppercase">Help Us Make a Difference</span>
+              <span className="text-xs font-bold text-white tracking-widest uppercase"><Typewriter text="Help Us Make a Difference" delay={400} /></span>
             </motion.div>
 
-            {/* Heading */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-[42px] md:text-[54px] lg:text-[60px] xl:text-[72px] font-serif font-bold text-white mb-4 lg:mb-6 leading-[1.1] tracking-tight text-left drop-shadow-md"
-            >
-              Be the Hand That <br />
-              <span className="text-bright-lime drop-shadow-lg block mt-1 lg:mt-2">Brings Happiness</span>
-            </motion.h1>
+            {/* Heading with SplitTextReveal */}
+            <div className="text-[42px] md:text-[54px] lg:text-[60px] xl:text-[72px] font-serif font-bold text-white mb-4 lg:mb-6 leading-[1.1] tracking-tight text-left drop-shadow-md">
+              <SplitTextReveal text="Be the Hand That" className="block" stagger={0.03} />
+              <SplitTextReveal text="Brings Happiness" className="text-bright-lime drop-shadow-lg block mt-1 lg:mt-2" stagger={0.03} />
+            </div>
 
             {/* Paragraph */}
             <motion.p
@@ -89,7 +98,7 @@ const Home = () => {
               A small act of kindness can change a life. While we have plenty, millions struggle for basic needs. Your support can bring food, shelter, and hope.
             </motion.p>
 
-            {/* Buttons */}
+            {/* Buttons with btn-skew */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -97,12 +106,12 @@ const Home = () => {
               className="flex flex-col sm:flex-row items-start sm:items-center gap-5"
             >
               <MagneticButton>
-                <a href="https://razorpay.me/@onehandforhappiness" target="_blank" rel="noreferrer" className="bg-[#f94a13] text-white px-8 py-3.5 rounded-full font-bold text-[16px] shadow-[0_4px_14px_rgba(249,74,19,0.4)] hover:shadow-[0_6px_20px_rgba(249,74,19,0.6)] hover:bg-[#e03d0b] transition-all flex items-center justify-center gap-2 w-full sm:w-auto" data-testid="button-donate-hero">
+                <a href="https://razorpay.me/@onehandforhappiness" target="_blank" rel="noreferrer" className="btn-skew bg-[#f94a13] text-white px-8 py-3.5 rounded-full font-bold text-[16px] shadow-[0_4px_14px_rgba(249,74,19,0.4)] hover:shadow-[0_6px_20px_rgba(249,74,19,0.6)] transition-all flex items-center justify-center gap-2 w-full sm:w-auto" data-testid="button-donate-hero">
                   Donate Now <Heart size={18} />
                 </a>
               </MagneticButton>
               <MagneticButton>
-                <Link href="/about" className="bg-white/10 backdrop-blur-md text-white border border-white/30 px-8 py-3.5 rounded-full font-bold text-[16px] hover:bg-white/20 transition-all flex items-center justify-center gap-2 w-full sm:w-auto" data-testid="link-about-hero">
+                <Link href="/about" className="btn-skew bg-white/10 backdrop-blur-md text-white border border-white/30 px-8 py-3.5 rounded-full font-bold text-[16px] hover:border-white transition-all flex items-center justify-center gap-2 w-full sm:w-auto" data-testid="link-about-hero">
                   Join the Mission <ArrowRight size={18} />
                 </Link>
               </MagneticButton>
@@ -133,21 +142,21 @@ const Home = () => {
 
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-10 items-center">
 
-            {/* Left Column (Text) */}
-            <motion.div
-              initial="hidden" whileInView="show" viewport={{ once: true, margin: "-50px" }}
-              variants={staggerContainer}
-              className="flex-1 w-full lg:w-1/2 pr-0 lg:pr-12"
-            >
+              <motion.div
+                initial="hidden" whileInView="show" viewport={{ once: true, margin: "-50px" }}
+                variants={staggerContainer}
+                className="flex-1 w-full lg:w-1/2 pr-0 lg:pr-12"
+              >
 
               {/* Heading */}
               <motion.div variants={fadeUp} className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-gray-100 bg-white mb-6 shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-orioles-orange"></span>
                 <span className="text-[13px] font-bold text-gray-800 tracking-[0.1em] uppercase">About Us</span>
               </motion.div>
-              <motion.h2 variants={fadeUp} className="text-[38px] md:text-[48px] lg:text-[56px] font-serif font-extrabold text-[#0c2444] leading-tight tracking-tight mb-8">
-                Who <span className="text-orioles-orange">We Are</span>
-              </motion.h2>
+              <div className="text-[38px] md:text-[48px] lg:text-[56px] font-serif font-extrabold text-[#0c2444] leading-tight tracking-tight mb-8">
+                <SplitTextReveal text="Who" className="inline-block mr-2" />
+                <SplitTextReveal text="We Are" className="text-orioles-orange inline-block" stagger={0.05} />
+              </div>
 
               <motion.p variants={fadeUp} className="text-[17px] text-gray-500 mb-12 leading-relaxed font-medium">
                 One Hand for Happiness (OHFH) is a community-driven NGO dedicated to breaking the cycle of poverty through education and nourishment. Our holistic approach ensures that every child receives not just academic support but also the essentials for a healthy, fulfilling life
@@ -180,9 +189,9 @@ const Home = () => {
               </motion.div>
 
               <motion.div variants={fadeUp}>
-                <Link href="/about" className="inline-flex items-center gap-6 bg-orioles-orange text-white pl-8 pr-2 py-2 rounded-full text-[17px] font-bold hover:bg-[#e03d0b] transition-all shadow-md">
+                <Link href="/about" className="btn-skew inline-flex items-center gap-6 bg-orioles-orange text-white pl-8 pr-2 py-2 rounded-full text-[17px] font-bold hover:bg-[#e03d0b] transition-all shadow-md">
                   About More
-                  <div className="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center relative z-10">
                     <ArrowRight size={20} strokeWidth={2.5} />
                   </div>
                 </Link>
@@ -190,13 +199,14 @@ const Home = () => {
             </motion.div>
 
             {/* Right Column (Visuals - Exact Pixel Perfect Grid Layout) */}
-            <motion.div
-              initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.8 }}
+            <div
               className="flex-1 w-full lg:w-1/2 flex gap-6 lg:gap-8 min-h-[650px]"
             >
-              {/* Left: Main Image */}
+              {/* Left: Main Image with CurtainReveal */}
               <div className="w-[55%] rounded-[32px] overflow-hidden shadow-sm">
-                <img src="/src/assets/images/ngo_main.png" alt="NGO Volunteer" className="w-full h-full object-cover" />
+                <CurtainReveal>
+                  <img src="/src/assets/images/ngo_main.png" alt="NGO Volunteer" className="image-anime w-full h-full object-cover" />
+                </CurtainReveal>
               </div>
 
               {/* Right: Stacked Cards */}
@@ -243,7 +253,7 @@ const Home = () => {
                   </div>
                 </motion.div>
               </div>
-            </motion.div>
+            </div>
 
           </div>
         </div>
@@ -254,20 +264,25 @@ const Home = () => {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
             <div className="max-w-2xl">
-              <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-gray-100 bg-white mb-6 shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-orioles-orange"></span>
-                <span className="text-[13px] font-bold text-gray-800 tracking-[0.1em] uppercase">Our Programs</span>
-              </motion.div>
-              <motion.h2 variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="text-[38px] md:text-[48px] lg:text-[56px] font-serif font-extrabold text-[#0c2444] leading-[1.15] tracking-tight">
-                Changing Lives <span className="text-orioles-orange">Through Action</span>
-              </motion.h2>
+              <ScrollReveal direction="up" delay={0.1}>
+                <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-gray-100 bg-white mb-6 shadow-sm">
+                  <span className="w-2 h-2 rounded-full bg-orioles-orange"></span>
+                  <span className="text-[13px] font-bold text-gray-800 tracking-[0.1em] uppercase">Our Programs</span>
+                </div>
+              </ScrollReveal>
+              <ScrollReveal direction="up" delay={0.2}>
+                <div className="text-[38px] md:text-[48px] lg:text-[56px] font-serif font-extrabold text-[#0c2444] leading-[1.15] tracking-tight">
+                  <SplitTextReveal text="Changing Lives" /> <br />
+                  <SplitTextReveal text="Through Action" className="text-orioles-orange" stagger={0.03} />
+                </div>
+              </ScrollReveal>
             </div>
-            <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="max-w-md text-gray-600">
+            <ScrollReveal direction="left" delay={0.3} className="max-w-md text-gray-600">
               <p className="mb-6 font-medium">With a commitment to excellence and community care, we offer comprehensive support through our targeted programs.</p>
-              <Link href="/contact-us" className="inline-flex items-center justify-center bg-orioles-orange text-white px-8 py-3.5 rounded-full font-bold hover:bg-[#e03d0b] transition-all shadow-md">
-                Donate Now <ArrowRight size={18} className="ml-2" />
+              <Link href="/contact-us" className="btn-skew inline-flex items-center justify-center bg-orioles-orange text-white px-8 py-3.5 rounded-full font-bold hover:bg-[#e03d0b] transition-all shadow-md">
+                Donate Now <ArrowRight size={18} className="ml-2 relative z-10" />
               </Link>
-            </motion.div>
+            </ScrollReveal>
           </div>
 
           <motion.div
