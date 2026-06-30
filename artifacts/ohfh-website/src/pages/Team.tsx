@@ -7,55 +7,55 @@ const teamMembers = [
     name: "Kiran Singh",
     role: "Founder",
     desc: "With over a decade dedicated to social work, Kiran Singh established One Hand For Happiness to address the pressing needs of underprivileged children. Her passion drives the mission to empower marginalized communities.",
-    img: "/src/assets/images/team-kiran.png"
+    img: "/images/team-kiran.png"
   },
   {
     name: "Anil Kumar Singh",
     role: "Treasurer",
     desc: "As the Head of Food Court Operations at PVRINOX LTD, Anil brings extensive experience in operations. He ensures financial transparency and oversees critical areas like community meal coordination.",
-    img: "/src/assets/images/team-anil.png"
+    img: "/images/team-anil.png"
   },
   {
     name: "Tarun Sharma",
     role: "Teacher",
     desc: "A Telecom Professional and Head of R&D at Frog Cellsat Ltd. Tarun is passionate about educating children, tutoring students in mathematics and language to foster a love for learning.",
-    img: "/src/assets/images/team-tarun.png"
+    img: "/images/team-tarun.png"
   },
   {
     name: "Ritu Jain",
     role: "Soft Skills Trainer",
     desc: "With 14 years of experience as an Interior Designer, Ritu brings creativity and insight. She teaches communication skills, etiquette, and self-presentation to students.",
-    img: "/src/assets/images/team-ritu.png"
+    img: "/images/team-ritu.png"
   },
   {
     name: "Pinky Jain",
     role: "Administrator",
     desc: "Serving as an Administrator, Pinky efficiently manages daily operations. She also teaches kindergarten children, focusing on foundational learning and creativity.",
-    img: "/src/assets/images/team-pinky.png"
+    img: "/images/team-pinky.png"
   },
   {
     name: "Rakhi Karn",
     role: "Teacher",
     desc: "A seasoned stock market portfolio manager, Rakhi applies her analytical skills to education by teaching English, Mathematics, and General Awareness.",
-    img: "/src/assets/images/team-rakhi.png"
+    img: "/images/team-rakhi.png"
   },
   {
     name: "Megha Agarwal",
     role: "Mathematics Teacher",
     desc: "Megha specializes in teaching Mathematics, helping students build strong foundational skills and confidence along with lessons in manners.",
-    img: "/src/assets/images/team-megha.png"
+    img: "/images/team-megha.png"
   },
   {
     name: "Anishka Singh",
     role: "Management",
     desc: "A professional actor, Anishka brings creativity to NGO management. She oversees cultural activities and organizes regular dance classes.",
-    img: "/src/assets/images/team-anishka.png"
+    img: "/images/team-anishka.png"
   },
   {
     name: "Priya Srivastava",
     role: "Extra-Curricular Coordinator",
     desc: "Business Process Consultant at SAP, Priya excels in optimizing workflows. She works with children to enhance confidence through extracurricular activities.",
-    img: "/src/assets/images/team-priya.png"
+    img: "/images/team-priya.png"
   }
 ];
 
@@ -64,7 +64,7 @@ const Team = () => {
     <div className="w-full bg-white min-h-screen">
       <Hero 
         title="Our Team" 
-        imageSrc="/src/assets/images/team_hero.png" 
+        imageSrc="/images/team_hero.png" 
         overlayColor="bg-ultra-violet"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Our Team' }]} 
       />

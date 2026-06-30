@@ -19,7 +19,7 @@ const ChildEducation = () => {
     <div className="w-full bg-white overflow-hidden">
       <Hero 
         title="Child Education" 
-        imageSrc="/src/assets/images/hero-child.png" 
+        imageSrc="/images/hero-child.png" 
         overlayColor="bg-ultra-violet"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Child Education' }]} 
       />
@@ -35,7 +35,7 @@ const ChildEducation = () => {
               className="w-full lg:w-1/2 relative"
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] z-10">
-                <img src="/src/assets/images/child_edu_intro.png" alt="Children studying happily" className="w-full h-full object-cover" />
+                <img src="/images/child_edu_intro.png" alt="Children studying happily" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
               </div>
               {/* Decorative offset box */}
@@ -113,7 +113,7 @@ const ChildEducation = () => {
       {/* Impact Section - Cinematic Parallax */}
       <section className="relative py-32 overflow-hidden flex items-center justify-center min-h-[60vh]">
         <div className="absolute inset-0 z-0">
-          <img src="/src/assets/images/child_edu_impact.png" alt="Impact" className="w-full h-full object-cover scale-105" />
+          <img src="/images/child_edu_impact.png" alt="Impact" className="w-full h-full object-cover scale-105" />
           <div className="absolute inset-0 bg-ultra-violet/80 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent"></div>
         </div>
@@ -191,7 +191,7 @@ const ChildEducation = () => {
 
             <div className="w-full lg:w-1/2 order-1 lg:order-2">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img src="/src/assets/images/child_edu_help.png" alt="Volunteer teaching" className="w-full h-full object-cover" />
+                <img src="/images/child_edu_help.png" alt="Volunteer teaching" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
             </div>

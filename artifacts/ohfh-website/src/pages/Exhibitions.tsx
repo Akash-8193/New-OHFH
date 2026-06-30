@@ -14,7 +14,7 @@ const Exhibitions = () => {
     <div className="w-full bg-white overflow-hidden">
       <Hero 
         title="Exhibitions" 
-        imageSrc="/src/assets/images/hero-exhibition.png" 
+        imageSrc="/images/hero-exhibition.png" 
         overlayColor="bg-ultra-violet"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Exhibitions' }]} 
       />
@@ -42,7 +42,7 @@ const Exhibitions = () => {
 
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="w-full lg:w-1/2 relative">
               <div className="rounded-[40px] overflow-hidden shadow-2xl border-4 border-white relative aspect-[4/3]">
-                <img src="/src/assets/images/hero-exhibition.png" alt="Exhibition Setup" className="w-full h-full object-cover" />
+                <img src="/images/hero-exhibition.png" alt="Exhibition Setup" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0c2444]/60 to-transparent"></div>
               </div>
               {/* Decorative element */}
@@ -67,7 +67,7 @@ const Exhibitions = () => {
             
             {/* Item 1: Potli Bags */}
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="relative h-[400px] rounded-[32px] overflow-hidden group shadow-lg">
-              <img src="/src/assets/images/women_masonry_1.png" alt="Potli Bags" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src="/images/women_masonry_1.png" alt="Potli Bags" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0c2444] via-[#0c2444]/60 to-transparent"></div>
               <div className="absolute inset-0 p-10 flex flex-col justify-end">
                 <div className="w-14 h-14 bg-orioles-orange text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg">
@@ -80,7 +80,7 @@ const Exhibitions = () => {
 
             {/* Item 2: Diyas */}
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} transition={{ delay: 0.1 }} className="relative h-[400px] rounded-[32px] overflow-hidden group shadow-lg">
-              <img src="/src/assets/images/project-exhibition.png" alt="Diyas" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src="/images/project-exhibition.png" alt="Diyas" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0c2444] via-[#0c2444]/60 to-transparent"></div>
               <div className="absolute inset-0 p-10 flex flex-col justify-end">
                 <div className="w-14 h-14 bg-bright-lime text-[#0c2444] rounded-2xl flex items-center justify-center mb-6 shadow-lg">
@@ -93,7 +93,7 @@ const Exhibitions = () => {
 
             {/* Item 3: Textiles */}
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="relative h-[400px] rounded-[32px] overflow-hidden group shadow-lg">
-              <img src="/src/assets/images/women_masonry_2.png" alt="Textiles" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src="/images/women_masonry_2.png" alt="Textiles" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0c2444] via-[#0c2444]/60 to-transparent"></div>
               <div className="absolute inset-0 p-10 flex flex-col justify-end">
                 <div className="w-14 h-14 bg-ultra-violet text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg">
@@ -106,7 +106,7 @@ const Exhibitions = () => {
 
             {/* Item 4: Eco-Friendly */}
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} transition={{ delay: 0.1 }} className="relative h-[400px] rounded-[32px] overflow-hidden group shadow-lg">
-              <img src="/src/assets/images/women_zigzag_1.png" alt="Eco-Friendly" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src="/images/women_zigzag_1.png" alt="Eco-Friendly" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0c2444] via-[#0c2444]/60 to-transparent"></div>
               <div className="absolute inset-0 p-10 flex flex-col justify-end">
                 <div className="w-14 h-14 bg-persian-blue text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg">

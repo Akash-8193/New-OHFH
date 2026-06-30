@@ -55,7 +55,7 @@ const VolunteerApplication = () => {
     <div className="w-full bg-[#f8f9fa] min-h-screen">
       <Hero 
         title="Volunteer With Us" 
-        imageSrc="/src/assets/images/team_hero.png" 
+        imageSrc="/images/team_hero.png" 
         overlayColor="bg-ultra-violet"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Volunteer' }]} 
       />
@@ -102,7 +102,7 @@ const VolunteerApplication = () => {
                 </div>
 
                 <div className="h-48 rounded-2xl overflow-hidden border-2 border-white/10 mt-8">
-                  <img src="/src/assets/images/community_program.png" alt="Community" className="w-full h-full object-cover" />
+                  <img src="/images/community_program.png" alt="Community" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>

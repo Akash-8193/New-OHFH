@@ -11,7 +11,7 @@ const MiddayMeals = () => {
     <div className="w-full bg-white">
       <Hero 
         title="Midday Meals" 
-        imageSrc="/src/assets/images/meals_program.png" 
+        imageSrc="/images/meals_program.png" 
         overlayColor="bg-ultra-violet"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Midday Meals' }]} 
       />
@@ -61,7 +61,7 @@ const MiddayMeals = () => {
               </p>
             </motion.div>
             <div className="flex-1 w-full aspect-video rounded-3xl overflow-hidden shadow-xl">
-              <img src="/src/assets/images/education_program.png" alt="Children studying" className="image-anime w-full h-full object-cover" />
+              <img src="/images/education_program.png" alt="Children studying" className="image-anime w-full h-full object-cover" />
             </div>
           </div>
 
@@ -82,7 +82,7 @@ const MiddayMeals = () => {
               </p>
             </motion.div>
             <div className="flex-1 w-full aspect-video rounded-3xl overflow-hidden shadow-xl">
-              <img src="/src/assets/images/women_emp_impact.png" alt="Women working" className="image-anime w-full h-full object-cover" />
+              <img src="/images/women_emp_impact.png" alt="Women working" className="image-anime w-full h-full object-cover" />
             </div>
           </div>
 

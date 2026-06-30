@@ -26,7 +26,7 @@ const WomenEmpowerment = () => {
     <div className="w-full bg-white overflow-hidden">
       <Hero 
         title="Women Empowerment" 
-        imageSrc="/src/assets/images/hero-women.png" 
+        imageSrc="/images/hero-women.png" 
         overlayColor="bg-ultra-violet"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Women Empowerment' }]} 
       />
@@ -45,21 +45,21 @@ const WomenEmpowerment = () => {
                 initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
                 className="absolute top-0 left-0 w-2/3 h-[350px] rounded-[32px] overflow-hidden shadow-2xl z-20"
               >
-                <img src="/src/assets/images/women_emp_intro.png" alt="Women learning" className="w-full h-full object-cover" />
+                <img src="/images/women_emp_intro.png" alt="Women learning" className="w-full h-full object-cover" />
               </motion.div>
               
               <motion.div 
                 initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}
                 className="absolute bottom-0 right-0 w-3/5 h-[300px] rounded-[32px] overflow-hidden shadow-xl z-30 border-4 border-white"
               >
-                <img src="/src/assets/images/women_masonry_1.png" alt="Woman small business" className="w-full h-full object-cover" />
+                <img src="/images/women_masonry_1.png" alt="Woman small business" className="w-full h-full object-cover" />
               </motion.div>
               
               <motion.div 
                 initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.4 }}
                 className="absolute top-1/2 -left-8 w-40 h-40 rounded-full overflow-hidden shadow-lg z-40 border-4 border-white hidden md:block"
               >
-                <img src="/src/assets/images/women_masonry_2.png" alt="Woman sewing" className="w-full h-full object-cover" />
+                <img src="/images/women_masonry_2.png" alt="Woman sewing" className="w-full h-full object-cover" />
               </motion.div>
             </div>
 
@@ -100,7 +100,7 @@ const WomenEmpowerment = () => {
             <div className="flex flex-col lg:flex-row items-center gap-16">
               <motion.div variants={slideInLeft} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-100px" }} className="w-full lg:w-1/2">
                 <div className="rounded-[40px] overflow-hidden shadow-2xl aspect-[4/3] relative group">
-                  <img src="/src/assets/images/women_zigzag_1.png" alt="Financial Literacy Workshop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img src="/images/women_zigzag_1.png" alt="Financial Literacy Workshop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-tr from-ultra-violet/40 to-transparent"></div>
                 </div>
               </motion.div>
@@ -138,7 +138,7 @@ const WomenEmpowerment = () => {
               </motion.div>
               <motion.div variants={slideInRight} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-100px" }} className="w-full lg:w-1/2 order-1 lg:order-2">
                 <div className="rounded-[40px] overflow-hidden shadow-2xl aspect-[4/3] relative group">
-                  <img src="/src/assets/images/women_zigzag_2.png" alt="Women Mentorship" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img src="/images/women_zigzag_2.png" alt="Women Mentorship" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-bl from-orioles-orange/30 to-transparent"></div>
                 </div>
               </motion.div>
@@ -165,7 +165,7 @@ const WomenEmpowerment = () => {
             
             {/* Box 2: Image Tile */}
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, delay: 0.1 }} className="md:col-span-2 rounded-[32px] overflow-hidden relative shadow-sm">
-              <img src="/src/assets/images/women_emp_impact.png" alt="Impact" className="w-full h-full object-cover" />
+              <img src="/images/women_emp_impact.png" alt="Impact" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-r from-[#0c2444]/90 to-transparent flex items-center p-10">
                 <div className="max-w-xs">
                   <Star className="text-bright-lime mb-4" size={32} />
@@ -206,7 +206,7 @@ const WomenEmpowerment = () => {
             
             <div className="w-full lg:w-5/12">
               <div className="relative rounded-[40px] overflow-hidden shadow-[0_0_50px_rgba(249,74,19,0.2)] border-2 border-white/10">
-                <img src="/src/assets/images/women_emp_help.png" alt="Women Support Group" className="w-full h-full object-cover" />
+                <img src="/images/women_emp_help.png" alt="Women Support Group" className="w-full h-full object-cover" />
               </div>
             </div>
             

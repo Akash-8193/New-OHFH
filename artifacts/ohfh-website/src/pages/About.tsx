@@ -13,7 +13,7 @@ const About = () => {
     <div className="w-full">
       <Hero 
         title="About Us" 
-        imageSrc="/src/assets/images/about-hero.png" 
+        imageSrc="/images/about-hero.png" 
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About Us' }]} 
       />
 
@@ -82,7 +82,7 @@ const About = () => {
             >
                <div className="relative inline-block w-full max-w-[600px]">
                  <CurtainReveal>
-                   <img src="/src/assets/images/cta-box-image.png" alt="Children holding sign" className="image-anime w-full h-auto object-contain drop-shadow-2xl" />
+                   <img src="/images/cta-box-image.png" alt="Children holding sign" className="image-anime w-full h-auto object-contain drop-shadow-2xl" />
                  </CurtainReveal>
                  
                  {/* Text Overlay on Cardboard (with background patch to hide old text) */}
@@ -142,7 +142,7 @@ const About = () => {
             >
               {/* Background Image & Gradient */}
               <div className="absolute inset-0 z-0">
-                <img src="/src/assets/images/mission_education.png" alt="Education" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src="/images/mission_education.png" alt="Education" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-transparent group-hover:via-white/50 transition-colors duration-500"></div>
               </div>
               
@@ -166,7 +166,7 @@ const About = () => {
             >
               {/* Background Image & Gradient */}
               <div className="absolute inset-0 z-0">
-                <img src="/src/assets/images/mission_women.png" alt="Women Empowerment" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src="/images/mission_women.png" alt="Women Empowerment" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-transparent group-hover:via-white/50 transition-colors duration-500"></div>
               </div>
 
@@ -190,7 +190,7 @@ const About = () => {
             >
               {/* Background Image & Gradient */}
               <div className="absolute inset-0 z-0">
-                <img src="/src/assets/images/mission_equip.png" alt="Equip Individuals" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src="/images/mission_equip.png" alt="Equip Individuals" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-transparent group-hover:via-white/50 transition-colors duration-500"></div>
               </div>
 
@@ -230,7 +230,7 @@ const About = () => {
                 </Link>
               </div>
               <div className="flex-1 w-full aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
-                <img src="/src/assets/images/about-child.png" alt="Child Education" className="w-full h-full object-cover" />
+                <img src="/images/about-child.png" alt="Child Education" className="w-full h-full object-cover" />
               </div>
             </motion.div>
 
@@ -248,7 +248,7 @@ const About = () => {
                 </Link>
               </div>
               <div className="flex-1 w-full aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
-                <img src="/src/assets/images/about-women.png" alt="Women Empowerment" className="w-full h-full object-cover" />
+                <img src="/images/about-women.png" alt="Women Empowerment" className="w-full h-full object-cover" />
               </div>
             </motion.div>
 
@@ -266,7 +266,7 @@ const About = () => {
                 </Link>
               </div>
               <div className="flex-1 w-full aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
-                <img src="/src/assets/images/about-skill.png" alt="Skill Development" className="w-full h-full object-cover" />
+                <img src="/images/about-skill.png" alt="Skill Development" className="w-full h-full object-cover" />
               </div>
             </motion.div>
 

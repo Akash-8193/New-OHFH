@@ -34,13 +34,13 @@ const testimonials = [
     quote: "Happy to see how this NGO is Helping out the underprivileged kids by educating them .It is a Great initiative and I am privileged to be one of their helping hands.",
     name: "Rubal Kardam",
     role: "Supporter",
-    image: "/src/assets/images/testimonial-ai.png"
+    image: "/images/testimonial-ai.png"
   },
   {
     quote: "It's a Very Nice initiative by Kiran Ma'am, to teach under privileged kids. The best NGO in Noida everybody should visit.",
     name: "Jayesh Bhatia",
     role: "Supporter",
-    image: "/src/assets/images/testimonial-ai.png"
+    image: "/images/testimonial-ai.png"
   }
 ];
 
@@ -52,7 +52,7 @@ const Home = () => {
       <section className="relative min-h-[100vh] pt-[140px] pb-20 w-full flex items-center overflow-hidden font-sans">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img src="/src/assets/images/program-image-2.jpg" alt="Hero Background" className="w-full h-full object-cover object-[75%_center]" />
+          <img src="/images/program-image-2.jpg" alt="Hero Background" className="w-full h-full object-cover object-[75%_center]" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0c2444] via-[#0c2444]/80 to-transparent w-[80%] md:w-[60%]"></div>
         </div>
 
@@ -205,7 +205,7 @@ const Home = () => {
               {/* Left: Main Image with CurtainReveal */}
               <div className="w-[55%] rounded-[32px] overflow-hidden shadow-sm">
                 <CurtainReveal>
-                  <img src="/src/assets/images/ngo_main.png" alt="NGO Volunteer" className="image-anime w-full h-full object-cover" />
+                  <img src="/images/ngo_main.png" alt="NGO Volunteer" className="image-anime w-full h-full object-cover" />
                 </CurtainReveal>
               </div>
 
@@ -229,7 +229,7 @@ const Home = () => {
                   </div>
 
                   <div className="absolute bottom-0 right-0 w-[55%] max-w-[140px]">
-                    <img src="/src/assets/images/ngo_3d.png" alt="3D student" className="w-full h-auto object-contain object-bottom drop-shadow-xl translate-x-2" />
+                    <img src="/images/ngo_3d.png" alt="3D student" className="w-full h-auto object-contain object-bottom drop-shadow-xl translate-x-2" />
                   </div>
                 </motion.div>
 
@@ -292,7 +292,7 @@ const Home = () => {
           >
             {/* Row 1 */}
             <motion.div variants={fadeUp} className="rounded-[32px] overflow-hidden aspect-square md:aspect-auto h-full min-h-[400px]">
-              <img src="/src/assets/images/education_program.png" alt="Education Program" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <img src="/images/education_program.png" alt="Education Program" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </motion.div>
 
             <motion.div variants={fadeUp} className="bg-orioles-orange rounded-[32px] p-8 lg:p-10 text-white flex flex-col justify-between min-h-[400px] shadow-lg">
@@ -308,7 +308,7 @@ const Home = () => {
             </motion.div>
 
             <motion.div variants={fadeUp} className="rounded-[32px] overflow-hidden aspect-square md:aspect-auto h-full min-h-[400px]">
-              <img src="/src/assets/images/meals_program.png" alt="Meals Program" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <img src="/images/meals_program.png" alt="Meals Program" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </motion.div>
 
             {/* Row 2 */}
@@ -325,7 +325,7 @@ const Home = () => {
             </motion.div>
 
             <motion.div variants={fadeUp} className="rounded-[32px] overflow-hidden aspect-square md:aspect-auto h-full min-h-[400px]">
-              <img src="/src/assets/images/community_program.png" alt="Community Program" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <img src="/images/community_program.png" alt="Community Program" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </motion.div>
 
             <motion.div variants={fadeUp} className="bg-ultra-violet rounded-[32px] p-8 lg:p-10 text-white flex flex-col justify-between min-h-[400px] shadow-lg">
@@ -369,12 +369,12 @@ const Home = () => {
 
                 {/* Large main circular image (Offset slightly Bottom-Right) */}
                 <div className="absolute top-[30px] left-[30px] w-[440px] h-[440px] rounded-full overflow-hidden shadow-md z-10 bg-white">
-                  <img src="/src/assets/images/home-about.png" alt="Children learning" className="w-full h-full object-cover" />
+                  <img src="/images/home-about.png" alt="Children learning" className="w-full h-full object-cover" />
                 </div>
 
                 {/* Smaller overlapping circular image (Bottom-Right corner) */}
                 <div className="absolute bottom-[0px] right-[0px] w-[230px] h-[230px] rounded-full overflow-hidden shadow-2xl border-[8px] border-white z-20 bg-white">
-                  <img src="/src/assets/images/project-education.png" alt="Children playing" className="w-full h-full object-cover" />
+                  <img src="/images/project-education.png" alt="Children playing" className="w-full h-full object-cover" />
                 </div>
 
                 {/* Decorative sunburst lines */}
@@ -491,7 +491,7 @@ const Home = () => {
             {/* Tall Item (Left Column) */}
             <motion.div variants={fadeUp} className="md:row-span-2 group relative overflow-hidden bg-gray-100 h-full min-h-[400px] md:min-h-0 cursor-pointer">
               <Link href="/child-education" className="block w-full h-full">
-                <img src="/src/assets/images/project-education.png" alt="Child with drawing" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src="/images/project-education.png" alt="Child with drawing" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-orioles-orange/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white z-10">
                   <span className="text-[15px] font-medium mb-1">Child Education</span>
                   <h3 className="text-[26px] font-bold leading-tight tracking-tight">A Future Begins with Learning</h3>
@@ -505,7 +505,7 @@ const Home = () => {
             {/* Square Item 1 (Top Middle) */}
             <motion.div variants={fadeUp} className="group relative overflow-hidden aspect-square bg-gray-100 cursor-pointer">
               <Link href="/women-empowerment" className="block w-full h-full">
-                <img src="/src/assets/images/project-women.png" alt="Women sewing" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src="/images/project-women.png" alt="Women sewing" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-orioles-orange/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white z-10">
                   <span className="text-[15px] font-medium mb-1">Women Empowerment</span>
                   <h3 className="text-[26px] font-bold leading-tight tracking-tight">Strength in Every Woman</h3>
@@ -519,7 +519,7 @@ const Home = () => {
             {/* Square Item 2 (Top Right) */}
             <motion.div variants={fadeUp} className="group relative overflow-hidden aspect-square bg-gray-100 cursor-pointer">
               <Link href="/exhibitions" className="block w-full h-full">
-                <img src="/src/assets/images/project-exhibition.png" alt="Exhibitions" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src="/images/project-exhibition.png" alt="Exhibitions" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-orioles-orange/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white z-10">
                   <span className="text-[15px] font-medium mb-1">Exhibitions</span>
                   <h3 className="text-[26px] font-bold leading-tight tracking-tight">Stories That Deserve to Be Seen</h3>
@@ -533,7 +533,7 @@ const Home = () => {
             {/* Square Item 3 (Bottom Middle) */}
             <motion.div variants={fadeUp} className="group relative overflow-hidden aspect-square bg-gray-100 cursor-pointer">
               <Link href="/skill-development" className="block w-full h-full">
-                <img src="/src/assets/images/project-skill.png" alt="Kids with bags" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src="/images/project-skill.png" alt="Kids with bags" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-orioles-orange/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white z-10">
                   <span className="text-[15px] font-medium mb-1">Skill Development</span>
                   <h3 className="text-[26px] font-bold leading-tight tracking-tight">A Pathway to Dignity</h3>
@@ -547,7 +547,7 @@ const Home = () => {
             {/* Square Item 4 (Bottom Right) */}
             <motion.div variants={fadeUp} className="group relative overflow-hidden aspect-square bg-gray-100 cursor-pointer">
               <Link href="/projects" className="block w-full h-full">
-                <img src="/src/assets/images/home-about.png" alt="People serving food" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src="/images/home-about.png" alt="People serving food" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-orioles-orange/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white z-10">
                   <span className="text-[15px] font-medium mb-1">Our Best Projects</span>
                   <h3 className="text-[26px] font-bold leading-tight tracking-tight">Event of Shares</h3>
@@ -597,7 +597,7 @@ const Home = () => {
             {/* Team Member 1 */}
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="flex flex-col items-center text-center">
               <div className="w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-md mb-6 bg-gray-100 relative group">
-                <img src="/src/assets/images/team-1.webp" alt="Kiran Singh" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src="/images/team-1.webp" alt="Kiran Singh" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-ultra-violet/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Kiran Singh</h3>
@@ -607,7 +607,7 @@ const Home = () => {
             {/* Team Member 2 */}
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-50px" }} transition={{ delay: 0.1 }} className="flex flex-col items-center text-center">
               <div className="w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-md mb-6 bg-gray-100 relative group">
-                <img src="/src/assets/images/team-2.webp" alt="Anil Kumar Singh" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src="/images/team-2.webp" alt="Anil Kumar Singh" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-ultra-violet/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Anil Kumar Singh</h3>
@@ -617,7 +617,7 @@ const Home = () => {
             {/* Team Member 3 */}
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-50px" }} transition={{ delay: 0.2 }} className="flex flex-col items-center text-center">
               <div className="w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-md mb-6 bg-gray-100 relative group">
-                <img src="/src/assets/images/team-3.webp" alt="Pinky Jain" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src="/images/team-3.webp" alt="Pinky Jain" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-ultra-violet/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Pinky Jain</h3>
@@ -650,13 +650,13 @@ const Home = () => {
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="w-full lg:w-[45%] flex gap-4 h-[600px]">
               {/* Tall Image */}
               <div className="w-1/2 h-full rounded-2xl overflow-hidden shadow-sm">
-                <img src="/src/assets/images/our-faqs-image-1.jpg" alt="Children playing" className="w-full h-full object-cover" />
+                <img src="/images/our-faqs-image-1.jpg" alt="Children playing" className="w-full h-full object-cover" />
               </div>
 
               <div className="w-1/2 flex flex-col gap-4 h-full">
                 {/* Small Top Image */}
                 <div className="flex-1 rounded-2xl overflow-hidden shadow-sm">
-                  <img src="/src/assets/images/our-faqs-image-2.jpg" alt="Children with blocks" className="w-full h-full object-cover" />
+                  <img src="/images/our-faqs-image-2.jpg" alt="Children with blocks" className="w-full h-full object-cover" />
                 </div>
                 {/* Dark Purple Box */}
                 <div className="flex-1 bg-ultra-violet rounded-2xl p-6 md:p-8 flex flex-col justify-center text-white shadow-sm">

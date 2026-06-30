@@ -16,7 +16,7 @@ const SkillDevelopment = () => {
     <div className="w-full bg-white overflow-hidden">
       <Hero 
         title="Skill Development" 
-        imageSrc="/src/assets/images/hero-skill.png" 
+        imageSrc="/images/hero-skill.png" 
         overlayColor="bg-ultra-violet"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Skill Development' }]} 
       />
@@ -28,14 +28,14 @@ const SkillDevelopment = () => {
           animate={{ y: [0, -20, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-10 left-10 md:left-20 w-48 h-64 md:w-64 md:h-80 rounded-[32px] overflow-hidden shadow-2xl opacity-60 z-0 rotate-[-8deg]"
         >
-          <img src="/src/assets/images/skill_intro_1.png" alt="Tech skills" className="w-full h-full object-cover" />
+          <img src="/images/skill_intro_1.png" alt="Tech skills" className="w-full h-full object-cover" />
         </motion.div>
         
         <motion.div 
           animate={{ y: [0, 20, 0] }} transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
           className="absolute bottom-10 right-10 md:right-32 w-56 h-56 md:w-72 md:h-72 rounded-[40px] overflow-hidden shadow-2xl opacity-50 z-0 rotate-[12deg]"
         >
-          <img src="/src/assets/images/skill_intro_2.png" alt="Vocational skills" className="w-full h-full object-cover" />
+          <img src="/images/skill_intro_2.png" alt="Vocational skills" className="w-full h-full object-cover" />
         </motion.div>
 
         <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl backdrop-blur-sm bg-white/60 p-12 rounded-[40px] border border-white/50 shadow-xl">
@@ -85,7 +85,7 @@ const SkillDevelopment = () => {
                 </div>
                 <div className="w-full md:w-[45%] pl-0 md:pl-12">
                   <div className="h-64 rounded-3xl overflow-hidden shadow-lg border border-gray-100">
-                    <img src="/src/assets/images/skill_roadmap_0.png" alt="Skill Assessment" className="w-full h-full object-cover" />
+                    <img src="/images/skill_roadmap_0.png" alt="Skill Assessment" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
@@ -94,7 +94,7 @@ const SkillDevelopment = () => {
               <div className="flex flex-col md:flex-row items-center justify-between w-full flex-col-reverse md:flex-row">
                 <div className="w-full md:w-[45%] pr-0 md:pr-12 mt-8 md:mt-0">
                   <div className="h-64 rounded-3xl overflow-hidden shadow-lg border border-gray-100">
-                    <img src="/src/assets/images/skill_intro_2.png" alt="Training" className="w-full h-full object-cover" />
+                    <img src="/images/skill_intro_2.png" alt="Training" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="absolute left-[28px] md:left-1/2 w-12 h-12 bg-white border-4 border-ultra-violet rounded-full -translate-x-1/2 flex items-center justify-center text-ultra-violet shadow-lg z-10 hidden md:flex">
@@ -117,7 +117,7 @@ const SkillDevelopment = () => {
                 </div>
                 <div className="w-full md:w-[45%] pl-0 md:pl-12">
                   <div className="h-64 rounded-3xl overflow-hidden shadow-lg border border-gray-100">
-                    <img src="/src/assets/images/skill_roadmap_1.png" alt="Job Readiness" className="w-full h-full object-cover" />
+                    <img src="/images/skill_roadmap_1.png" alt="Job Readiness" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
@@ -126,7 +126,7 @@ const SkillDevelopment = () => {
               <div className="flex flex-col md:flex-row items-center justify-between w-full flex-col-reverse md:flex-row">
                 <div className="w-full md:w-[45%] pr-0 md:pr-12 mt-8 md:mt-0">
                   <div className="h-64 rounded-3xl overflow-hidden shadow-lg border border-gray-100">
-                    <img src="/src/assets/images/women_masonry_1.png" alt="Placement & Support" className="w-full h-full object-cover" />
+                    <img src="/images/women_masonry_1.png" alt="Placement & Support" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="absolute left-[28px] md:left-1/2 w-12 h-12 bg-white border-4 border-bright-lime rounded-full -translate-x-1/2 flex items-center justify-center text-green-600 shadow-lg z-10 hidden md:flex">

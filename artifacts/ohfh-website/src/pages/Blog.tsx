@@ -33,7 +33,7 @@ const Blog = () => {
     <div className="w-full bg-gray-50 min-h-screen">
       <Hero 
         title="Our Latest Articles" 
-        imageSrc="/src/assets/images/blog_hero.png" 
+        imageSrc="/images/blog_hero.png" 
         overlayColor="bg-ultra-violet"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Blog' }]} 
       />

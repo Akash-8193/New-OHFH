@@ -56,7 +56,7 @@ const Contact = () => {
       
       <Hero 
         title="Contact us" 
-        imageSrc="/src/assets/images/contact_hero.png" 
+        imageSrc="/images/contact_hero.png" 
         overlayColor="bg-[#0c2444]"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Contact Us' }]} 
       />
@@ -142,7 +142,7 @@ const Contact = () => {
             {/* Left Image */}
             <div className="w-full lg:w-5/12 h-[600px] rounded-[2rem] overflow-hidden">
               <CurtainReveal>
-                <img src="/src/assets/images/contact_form.png" alt="Volunteer" className="image-anime w-full h-full object-cover" />
+                <img src="/images/contact_form.png" alt="Volunteer" className="image-anime w-full h-full object-cover" />
               </CurtainReveal>
             </div>
 
