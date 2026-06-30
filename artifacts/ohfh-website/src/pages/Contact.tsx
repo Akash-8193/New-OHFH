@@ -53,12 +53,12 @@ const Contact = () => {
       <Hero 
         title="Contact us" 
         imageSrc="/src/assets/images/contact_hero.png" 
-        overlayColor="bg-[#0F352E]"
+        overlayColor="bg-[#0c2444]"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Contact Us' }]} 
       />
 
       {/* Yellow Ticker */}
-      <div className="w-full bg-[#F4D35E] overflow-hidden flex py-4 border-b-4 border-[#e3c456]">
+      <div className="w-full bg-[#f94a13] overflow-hidden flex py-4 border-b-4 border-[#e03d0b]">
         <motion.div 
           animate={{ x: [0, -1000] }} 
           transition={{ repeat: Infinity, ease: "linear", duration: 20 }}
@@ -66,8 +66,8 @@ const Contact = () => {
         >
           {tickerItems.map((item, idx) => (
             <div key={idx} className="flex items-center gap-8 shrink-0">
-              <span className="text-[#0F352E] text-2xl font-bold tracking-tight">{item}</span>
-              <svg className="w-6 h-6 text-[#0F352E]" viewBox="0 0 24 24" fill="currentColor">
+              <span className="text-[#0c2444] text-2xl font-bold tracking-tight">{item}</span>
+              <svg className="w-6 h-6 text-[#0c2444]" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2L15 9H22L16 14L18 21L12 17L6 21L8 14L2 9H9L12 2Z" />
               </svg>
             </div>
@@ -82,46 +82,46 @@ const Contact = () => {
             
             {/* Phone Card */}
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-white rounded-[2rem] p-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-[#F4D35E] rounded-full flex items-center justify-center mb-6">
-                <Phone className="text-[#0F352E]" size={28} strokeWidth={1.5} />
+              <div className="w-16 h-16 bg-[#f94a13] rounded-full flex items-center justify-center mb-6">
+                <Phone className="text-[#0c2444]" size={28} strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-bold text-[#0F352E] mb-4">Phone Number</h3>
+              <h3 className="text-xl font-bold text-[#0c2444] mb-4">Phone Number</h3>
               <p className="text-gray-500 mb-6 text-[15px] leading-relaxed">
                 We work closely with communities to identify real needs.
               </p>
               <div className="w-full h-[1px] bg-gray-100 mb-6"></div>
-              <a href="tel:+919650010447" className="text-[#0F352E] font-bold text-lg hover:text-[#F4D35E] transition-colors">
+              <a href="tel:+919650010447" className="text-[#0c2444] font-bold text-lg hover:text-[#f94a13] transition-colors">
                 Call Us: +91-9650010447
               </a>
             </motion.div>
 
             {/* Email Card */}
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="bg-white rounded-[2rem] p-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-[#F4D35E] rounded-full flex items-center justify-center mb-6">
-                <Mail className="text-[#0F352E]" size={28} strokeWidth={1.5} />
+              <div className="w-16 h-16 bg-[#f94a13] rounded-full flex items-center justify-center mb-6">
+                <Mail className="text-[#0c2444]" size={28} strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-bold text-[#0F352E] mb-4">Email Address</h3>
+              <h3 className="text-xl font-bold text-[#0c2444] mb-4">Email Address</h3>
               <p className="text-gray-500 mb-6 text-[15px] leading-relaxed">
                 We work closely with communities to identify real needs.
               </p>
               <div className="w-full h-[1px] bg-gray-100 mb-6"></div>
-              <a href="mailto:onehandforhappiness@gmail.com" className="text-[#0F352E] font-bold text-base hover:text-[#F4D35E] transition-colors">
+              <a href="mailto:onehandforhappiness@gmail.com" className="text-[#0c2444] font-bold text-base hover:text-[#f94a13] transition-colors">
                 Email: onehandforhappiness@gmail.com
               </a>
             </motion.div>
 
             {/* Location Card */}
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="bg-white rounded-[2rem] p-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-[#F4D35E] rounded-full flex items-center justify-center mb-6 relative">
-                <MapPin className="text-[#0F352E]" size={28} strokeWidth={1.5} />
-                <div className="absolute top-1 left-2 w-1.5 h-1.5 bg-yellow-600 rounded-full"></div>
+              <div className="w-16 h-16 bg-[#f94a13] rounded-full flex items-center justify-center mb-6 relative">
+                <MapPin className="text-[#0c2444]" size={28} strokeWidth={1.5} />
+                <div className="absolute top-1 left-2 w-1.5 h-1.5 bg-orange-600 rounded-full"></div>
               </div>
-              <h3 className="text-xl font-bold text-[#0F352E] mb-4">Our Location</h3>
+              <h3 className="text-xl font-bold text-[#0c2444] mb-4">Our Location</h3>
               <p className="text-gray-500 mb-6 text-[15px] leading-relaxed">
                 We work closely with communities to identify real needs.
               </p>
               <div className="w-full h-[1px] bg-gray-100 mb-6"></div>
-              <p className="text-[#0F352E] font-bold text-sm leading-snug max-w-[200px]">
+              <p className="text-[#0c2444] font-bold text-sm leading-snug max-w-[200px]">
                 Plot No.-76, Gali No.-1, Garhi Chaukhandi, Sector-68, Noida
               </p>
             </motion.div>
@@ -152,18 +152,18 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <FormField control={form.control} name="firstName" render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[#0F352E] font-bold text-[15px]">First Name *</FormLabel>
+                        <FormLabel className="text-[#0c2444] font-bold text-[15px]">First Name *</FormLabel>
                         <FormControl>
-                          <Input placeholder="Enter First Name*" className="bg-[#F9FAFB] border-0 h-14 rounded-xl px-5 text-gray-700 focus-visible:ring-1 focus-visible:ring-[#0F352E]" {...field} />
+                          <Input placeholder="Enter First Name*" className="bg-[#F9FAFB] border-0 h-14 rounded-xl px-5 text-gray-700 focus-visible:ring-1 focus-visible:ring-[#0c2444]" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )} />
                     <FormField control={form.control} name="lastName" render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[#0F352E] font-bold text-[15px]">Last Name *</FormLabel>
+                        <FormLabel className="text-[#0c2444] font-bold text-[15px]">Last Name *</FormLabel>
                         <FormControl>
-                          <Input placeholder="Enter Last Name" className="bg-[#F9FAFB] border-0 h-14 rounded-xl px-5 text-gray-700 focus-visible:ring-1 focus-visible:ring-[#0F352E]" {...field} />
+                          <Input placeholder="Enter Last Name" className="bg-[#F9FAFB] border-0 h-14 rounded-xl px-5 text-gray-700 focus-visible:ring-1 focus-visible:ring-[#0c2444]" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -173,18 +173,18 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <FormField control={form.control} name="phone" render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[#0F352E] font-bold text-[15px]">Phone Number *</FormLabel>
+                        <FormLabel className="text-[#0c2444] font-bold text-[15px]">Phone Number *</FormLabel>
                         <FormControl>
-                          <Input placeholder="Enter Phone Number" className="bg-[#F9FAFB] border-0 h-14 rounded-xl px-5 text-gray-700 focus-visible:ring-1 focus-visible:ring-[#0F352E]" {...field} />
+                          <Input placeholder="Enter Phone Number" className="bg-[#F9FAFB] border-0 h-14 rounded-xl px-5 text-gray-700 focus-visible:ring-1 focus-visible:ring-[#0c2444]" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )} />
                     <FormField control={form.control} name="email" render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[#0F352E] font-bold text-[15px]">Email Address *</FormLabel>
+                        <FormLabel className="text-[#0c2444] font-bold text-[15px]">Email Address *</FormLabel>
                         <FormControl>
-                          <Input placeholder="Enter Email Address" className="bg-[#F9FAFB] border-0 h-14 rounded-xl px-5 text-gray-700 focus-visible:ring-1 focus-visible:ring-[#0F352E]" {...field} />
+                          <Input placeholder="Enter Email Address" className="bg-[#F9FAFB] border-0 h-14 rounded-xl px-5 text-gray-700 focus-visible:ring-1 focus-visible:ring-[#0c2444]" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -193,16 +193,16 @@ const Contact = () => {
 
                   <FormField control={form.control} name="message" render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-[#0F352E] font-bold text-[15px]">Message</FormLabel>
+                      <FormLabel className="text-[#0c2444] font-bold text-[15px]">Message</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="Any Message..." className="bg-[#F9FAFB] border-0 min-h-[150px] rounded-xl p-5 text-gray-700 focus-visible:ring-1 focus-visible:ring-[#0F352E] resize-none" {...field} />
+                        <Textarea placeholder="Any Message..." className="bg-[#F9FAFB] border-0 min-h-[150px] rounded-xl p-5 text-gray-700 focus-visible:ring-1 focus-visible:ring-[#0c2444] resize-none" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )} />
 
                   <div className="pt-2">
-                    <Button type="submit" className="bg-[#F4D35E] hover:bg-[#e3c456] text-[#0F352E] font-bold text-[16px] px-8 py-7 rounded-xl transition-all">
+                    <Button type="submit" className="bg-[#f94a13] hover:bg-[#e03d0b] text-white font-bold text-[16px] px-8 py-7 rounded-xl transition-all shadow-lg">
                       Submit Message
                     </Button>
                   </div>
@@ -217,10 +217,10 @@ const Contact = () => {
       <section className="py-24 bg-white flex flex-col items-center">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center px-4 mb-16 max-w-3xl flex flex-col items-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-200 mb-6">
-            <div className="w-1.5 h-1.5 rounded-full bg-[#F4D35E]"></div>
-            <span className="text-[13px] font-bold tracking-wide text-[#0F352E]">Our Location</span>
+            <div className="w-1.5 h-1.5 rounded-full bg-[#f94a13]"></div>
+            <span className="text-[13px] font-bold tracking-wide text-[#0c2444]">Our Location</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0F352E] mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0c2444] mb-6 tracking-tight">
             Where We Make an Impact
           </h2>
           <p className="text-gray-500 text-lg leading-relaxed">

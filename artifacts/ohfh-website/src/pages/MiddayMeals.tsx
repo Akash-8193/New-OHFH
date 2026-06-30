@@ -10,7 +10,7 @@ const MiddayMeals = () => {
     <div className="w-full bg-white">
       <Hero 
         title="Midday Meals" 
-        imageSrc="/src/assets/images/hero-meals.png" 
+        imageSrc="/src/assets/images/meals_program.png" 
         overlayColor="bg-ultra-violet"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Midday Meals' }]} 
       />
@@ -37,7 +37,7 @@ const MiddayMeals = () => {
               </div>
             </motion.div>
             <div className="flex-1 w-full aspect-video rounded-3xl overflow-hidden shadow-xl">
-              <img src="/src/assets/images/meals-1.png" alt="Children eating" className="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=1600" alt="Children eating" className="w-full h-full object-cover" />
             </div>
           </div>
 
@@ -56,7 +56,7 @@ const MiddayMeals = () => {
               </p>
             </motion.div>
             <div className="flex-1 w-full aspect-video rounded-3xl overflow-hidden shadow-xl">
-              <img src="/src/assets/images/meals-2.png" alt="Children studying" className="w-full h-full object-cover" />
+              <img src="/src/assets/images/education_program.png" alt="Children studying" className="w-full h-full object-cover" />
             </div>
           </div>
 
@@ -75,7 +75,7 @@ const MiddayMeals = () => {
               </p>
             </motion.div>
             <div className="flex-1 w-full aspect-video rounded-3xl overflow-hidden shadow-xl">
-              <img src="/src/assets/images/meals-3.png" alt="Women working" className="w-full h-full object-cover" />
+              <img src="/src/assets/images/women_emp_impact.png" alt="Women working" className="w-full h-full object-cover" />
             </div>
           </div>
 
@@ -94,7 +94,7 @@ const MiddayMeals = () => {
               </p>
             </motion.div>
             <div className="flex-1 w-full aspect-video rounded-3xl overflow-hidden shadow-xl">
-              <img src="/src/assets/images/meals-4.png" alt="Nourishing lives" className="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?auto=format&fit=crop&q=80&w=1600" alt="Nourishing lives" className="w-full h-full object-cover" />
             </div>
           </div>
 
@@ -102,7 +102,7 @@ const MiddayMeals = () => {
       </section>
 
       {/* Donation Grid */}
-      <section className="py-24 bg-ultra-violet text-white text-center">
+      <section className="pt-24 pb-10 bg-ultra-violet text-white text-center">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-4xl font-serif font-bold mb-6 text-bright-lime">Make an Impact Today</h2>
           <p className="text-xl text-white/90 mb-16 max-w-2xl mx-auto">Choose an amount to donate and directly fund our midday meal program.</p>
