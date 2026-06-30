@@ -4,14 +4,12 @@ import { logger } from "./lib/logger";
 const rawPort = process.env["PORT"] || "5000";
 const port = isNaN(Number(rawPort)) ? rawPort : Number(rawPort);
 
-if (!process.env.VERCEL) {
-  app.listen(port, (err?: any) => {
-    if (err) {
-      logger.error({ err }, "Error listening on port");
-      process.exit(1);
-    }
-    logger.info({ port }, "Server listening");
-  });
-}
+app.listen(port, (err?: any) => {
+  if (err) {
+    logger.error({ err }, "Error listening on port");
+    process.exit(1);
+  }
+  logger.info({ port }, "Server listening");
+});
 
 export default app;
