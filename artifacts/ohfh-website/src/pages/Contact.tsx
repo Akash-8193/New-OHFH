@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Send } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -9,21 +9,24 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { toast } from '@/hooks/use-toast';
+import { Link } from 'wouter';
 
 const formSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Invalid email address"),
-  subject: z.string().min(5, "Subject must be at least 5 characters"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
+  firstName: z.string().min(2, "Required"),
+  lastName: z.string().min(2, "Required"),
+  phone: z.string().min(10, "Required"),
+  email: z.string().email("Invalid email"),
+  message: z.string().optional(),
 });
 
 const Contact = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
+      firstName: "",
+      lastName: "",
+      phone: "",
       email: "",
-      subject: "",
       message: "",
     },
   });
@@ -37,144 +40,226 @@ const Contact = () => {
     form.reset();
   };
 
+  const tickerItems = [
+    "Volunteer Impact", "Future Ready", "Community Support", "Health Support",
+    "Volunteer Impact", "Future Ready", "Community Support", "Health Support",
+    "Volunteer Impact", "Future Ready", "Community Support", "Health Support"
+  ];
+
   return (
-    <div className="w-full bg-white">
-      {/* Hero */}
-      <section className="relative py-24 bg-ultra-violet text-center">
-        <div className="container mx-auto px-4 relative z-10">
+    <div className="w-full bg-white font-sans">
+      
+      {/* 1. Hero Section */}
+      <section className="relative w-full py-40 flex items-center justify-center overflow-hidden bg-[#0F352E]">
+        {/* Background Image & Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img src="/src/assets/images/contact_hero.png" alt="Contact Hero" className="w-full h-full object-cover opacity-90" />
+          <div className="absolute inset-0 bg-[#0F352E]/50 mix-blend-multiply"></div>
+        </div>
+        
+        <div className="relative z-10 text-center px-4 w-full flex flex-col items-center">
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-serif font-bold text-white mb-6"
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
+            className="text-5xl md:text-[80px] font-bold text-white mb-6 tracking-tight leading-none"
           >
-            Let's Create Change <span className="text-bright-lime">Together</span>
+            Contact us
           </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-            className="text-xl text-white/90 max-w-3xl mx-auto"
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex items-center gap-2 text-white/90 text-lg font-medium"
           >
-            At One Hand For Happiness, every voice matters, every question is important, and every partnership can create a lasting impact. Whether you want to volunteer, donate, collaborate, or simply learn more about our work, we are here to connect with you.
-          </motion.p>
+            <Link href="/" className="hover:text-[#FFD166] transition-colors">Home</Link>
+            <span>/</span>
+            <span className="text-[#FFD166]">Contact Us</span>
+          </motion.div>
         </div>
       </section>
 
-      <section className="py-24">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid lg:grid-cols-3 gap-12">
-            
-            {/* Contact Info */}
-            <div className="lg:col-span-1 space-y-6">
-              <h2 className="text-3xl font-serif font-bold text-ultra-violet mb-8">Contact Information</h2>
-              
-              <div className="bg-gray-50 p-6 rounded-2xl flex items-start gap-4 hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-orioles-orange/10 text-orioles-orange rounded-full flex items-center justify-center shrink-0">
-                  <MapPin size={24} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900 mb-2">Our Location</h4>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    Plot No.-76, Gali No.-1, Vill: Garhi Chaukhandi, Dhanni Colony, Near Sai Medical Store, Sector-68, Noida-201301 (Opp. Cleo Street Market, Sector-121)
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-2xl flex items-start gap-4 hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-persian-blue/10 text-persian-blue rounded-full flex items-center justify-center shrink-0">
-                  <Phone size={24} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900 mb-2">Phone Number</h4>
-                  <a href="tel:+919650010447" className="text-gray-600 text-sm hover:text-persian-blue transition-colors">+91-9650010447</a>
-                </div>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-2xl flex items-start gap-4 hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-bright-lime/20 text-lime-700 rounded-full flex items-center justify-center shrink-0">
-                  <Mail size={24} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900 mb-2">Email Address</h4>
-                  <a href="mailto:onehandforhappiness@gmail.com" className="text-gray-600 text-sm hover:text-lime-700 transition-colors">onehandforhappiness@gmail.com</a>
-                </div>
-              </div>
+      {/* Yellow Ticker */}
+      <div className="w-full bg-[#F4D35E] overflow-hidden flex py-4 border-b-4 border-[#e3c456]">
+        <motion.div 
+          animate={{ x: [0, -1000] }} 
+          transition={{ repeat: Infinity, ease: "linear", duration: 20 }}
+          className="flex whitespace-nowrap items-center gap-8 px-4"
+        >
+          {tickerItems.map((item, idx) => (
+            <div key={idx} className="flex items-center gap-8 shrink-0">
+              <span className="text-[#0F352E] text-2xl font-bold tracking-tight">{item}</span>
+              <svg className="w-6 h-6 text-[#0F352E]" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L15 9H22L16 14L18 21L12 17L6 21L8 14L2 9H9L12 2Z" />
+              </svg>
             </div>
+          ))}
+        </motion.div>
+      </div>
 
-            {/* Contact Form */}
-            <div className="lg:col-span-2 bg-white rounded-3xl shadow-xl border border-gray-100 p-8 md:p-12">
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8">Send Us a Message</h2>
-              
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-gray-700">Your Name</FormLabel>
-                          <FormControl>
-                            <Input placeholder="John Doe" {...field} className="bg-gray-50 border-transparent focus:bg-white text-lg py-6" data-testid="input-name" />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-gray-700">Email Address</FormLabel>
-                          <FormControl>
-                            <Input placeholder="john@example.com" {...field} className="bg-gray-50 border-transparent focus:bg-white text-lg py-6" data-testid="input-email" />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
-                  
-                  <FormField
-                    control={form.control}
-                    name="subject"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-gray-700">Subject</FormLabel>
-                        <FormControl>
-                          <Input placeholder="How can we help?" {...field} className="bg-gray-50 border-transparent focus:bg-white text-lg py-6" data-testid="input-subject" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-gray-700">Your Message</FormLabel>
-                        <FormControl>
-                          <Textarea 
-                            placeholder="Write your message here..." 
-                            className="min-h-[150px] bg-gray-50 border-transparent focus:bg-white text-lg resize-none"
-                            {...field} 
-                            data-testid="input-message"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <Button type="submit" className="w-full md:w-auto bg-ultra-violet hover:bg-purple-900 text-white font-bold py-6 px-10 rounded-full text-lg shadow-lg flex items-center gap-2" data-testid="button-submit">
-                    Send Message <Send size={18} />
-                  </Button>
-                </form>
-              </Form>
-            </div>
+      {/* 2. Information Cards Section */}
+      <section className="py-24 bg-[#FAFAFA]">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="grid md:grid-cols-3 gap-8">
             
+            {/* Phone Card */}
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-white rounded-[2rem] p-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-[#F4D35E] rounded-full flex items-center justify-center mb-6">
+                <Phone className="text-[#0F352E]" size={28} strokeWidth={1.5} />
+              </div>
+              <h3 className="text-xl font-bold text-[#0F352E] mb-4">Phone Number</h3>
+              <p className="text-gray-500 mb-6 text-[15px] leading-relaxed">
+                We work closely with communities to identify real needs.
+              </p>
+              <div className="w-full h-[1px] bg-gray-100 mb-6"></div>
+              <a href="tel:+919650010447" className="text-[#0F352E] font-bold text-lg hover:text-[#F4D35E] transition-colors">
+                Call Us: +91-9650010447
+              </a>
+            </motion.div>
+
+            {/* Email Card */}
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="bg-white rounded-[2rem] p-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-[#F4D35E] rounded-full flex items-center justify-center mb-6">
+                <Mail className="text-[#0F352E]" size={28} strokeWidth={1.5} />
+              </div>
+              <h3 className="text-xl font-bold text-[#0F352E] mb-4">Email Address</h3>
+              <p className="text-gray-500 mb-6 text-[15px] leading-relaxed">
+                We work closely with communities to identify real needs.
+              </p>
+              <div className="w-full h-[1px] bg-gray-100 mb-6"></div>
+              <a href="mailto:onehandforhappiness@gmail.com" className="text-[#0F352E] font-bold text-base hover:text-[#F4D35E] transition-colors">
+                Email: onehandforhappiness@gmail.com
+              </a>
+            </motion.div>
+
+            {/* Location Card */}
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="bg-white rounded-[2rem] p-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-[#F4D35E] rounded-full flex items-center justify-center mb-6 relative">
+                <MapPin className="text-[#0F352E]" size={28} strokeWidth={1.5} />
+                <div className="absolute top-1 left-2 w-1.5 h-1.5 bg-yellow-600 rounded-full"></div>
+              </div>
+              <h3 className="text-xl font-bold text-[#0F352E] mb-4">Our Location</h3>
+              <p className="text-gray-500 mb-6 text-[15px] leading-relaxed">
+                We work closely with communities to identify real needs.
+              </p>
+              <div className="w-full h-[1px] bg-gray-100 mb-6"></div>
+              <p className="text-[#0F352E] font-bold text-sm leading-snug max-w-[200px]">
+                Plot No.-76, Gali No.-1, Garhi Chaukhandi, Sector-68, Noida
+              </p>
+            </motion.div>
+
           </div>
         </div>
+      </section>
+
+      {/* 3. Form & Image Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="flex flex-col lg:flex-row gap-16 items-center">
+            
+            {/* Left Image */}
+            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="w-full lg:w-5/12 h-[600px]">
+              <img src="/src/assets/images/contact_form.png" alt="Volunteer" className="w-full h-full object-cover rounded-[2rem]" />
+            </motion.div>
+
+            {/* Right Form */}
+            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="w-full lg:w-7/12">
+              <h2 className="text-[17px] text-gray-700 font-medium leading-relaxed mb-10 max-w-2xl">
+                We'd love to hear from you! Whether you want to volunteer, support our programs, or learn more about our initiatives.
+              </h2>
+
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <FormField control={form.control} name="firstName" render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-[#0F352E] font-bold text-[15px]">First Name *</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Enter First Name*" className="bg-[#F9FAFB] border-0 h-14 rounded-xl px-5 text-gray-700 focus-visible:ring-1 focus-visible:ring-[#0F352E]" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )} />
+                    <FormField control={form.control} name="lastName" render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-[#0F352E] font-bold text-[15px]">Last Name *</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Enter Last Name" className="bg-[#F9FAFB] border-0 h-14 rounded-xl px-5 text-gray-700 focus-visible:ring-1 focus-visible:ring-[#0F352E]" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )} />
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <FormField control={form.control} name="phone" render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-[#0F352E] font-bold text-[15px]">Phone Number *</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Enter Phone Number" className="bg-[#F9FAFB] border-0 h-14 rounded-xl px-5 text-gray-700 focus-visible:ring-1 focus-visible:ring-[#0F352E]" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )} />
+                    <FormField control={form.control} name="email" render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-[#0F352E] font-bold text-[15px]">Email Address *</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Enter Email Address" className="bg-[#F9FAFB] border-0 h-14 rounded-xl px-5 text-gray-700 focus-visible:ring-1 focus-visible:ring-[#0F352E]" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )} />
+                  </div>
+
+                  <FormField control={form.control} name="message" render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-[#0F352E] font-bold text-[15px]">Message</FormLabel>
+                      <FormControl>
+                        <Textarea placeholder="Any Message..." className="bg-[#F9FAFB] border-0 min-h-[150px] rounded-xl p-5 text-gray-700 focus-visible:ring-1 focus-visible:ring-[#0F352E] resize-none" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )} />
+
+                  <div className="pt-2">
+                    <Button type="submit" className="bg-[#F4D35E] hover:bg-[#e3c456] text-[#0F352E] font-bold text-[16px] px-8 py-7 rounded-xl transition-all">
+                      Submit Message
+                    </Button>
+                  </div>
+                </form>
+              </Form>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Map Section */}
+      <section className="py-24 bg-white flex flex-col items-center">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center px-4 mb-16 max-w-3xl flex flex-col items-center">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-200 mb-6">
+            <div className="w-1.5 h-1.5 rounded-full bg-[#F4D35E]"></div>
+            <span className="text-[13px] font-bold tracking-wide text-[#0F352E]">Our Location</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0F352E] mb-6 tracking-tight">
+            Where We Make an Impact
+          </h2>
+          <p className="text-gray-500 text-lg leading-relaxed">
+            Our offices and outreach centers are located across key regions, allowing us to connect directly with communities and deliver programs efficiently and effectively.
+          </p>
+        </motion.div>
+
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full max-w-[1400px] px-4 md:px-8">
+          <div className="w-full h-[500px] rounded-[2rem] overflow-hidden shadow-lg relative">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112108.97495066804!2d77.30310899388836!3d28.5878438257007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c8720fac!2sSector%2068%2C%20Noida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1714589324032!5m2!1sen!2sin" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen={true} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              className="grayscale-[0.3] contrast-[1.1] opacity-90"
+            ></iframe>
+          </div>
+        </motion.div>
       </section>
     </div>
   );

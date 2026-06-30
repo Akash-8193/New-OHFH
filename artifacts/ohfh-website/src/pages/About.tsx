@@ -105,47 +105,113 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission */}
-      <section className="py-24 bg-ultra-violet text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold mb-6 text-bright-lime">Our Mission</h2>
-            <p className="text-xl text-white/90">
-              We exist to create lasting change by addressing the root causes of poverty and inequality. We do not believe in just helping people survive; we believe in helping them thrive.
-            </p>
-          </div>
+      {/* Mission - Clean & Cohesive Redesign */}
+      <section className="py-24 bg-[#fffdfb] relative overflow-hidden font-sans">
+        {/* Subtle decorative background */}
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#f4f7f6] to-transparent pointer-events-none"></div>
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-bright-lime/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-orioles-orange/5 rounded-full blur-[100px] pointer-events-none"></div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="container mx-auto px-4 max-w-7xl relative z-10">
+          
+          <div className="text-center max-w-3xl mx-auto mb-20">
             <motion.div 
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 text-center"
+              className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-gray-100 bg-white mb-6 shadow-sm"
             >
-              <div className="w-16 h-16 bg-bright-lime text-ultra-violet rounded-full flex items-center justify-center mx-auto mb-6">
-                <BookOpen size={28} />
-              </div>
-              <h3 className="text-xl font-bold mb-4">Provide Quality Education</h3>
-              <p className="text-white/80">To children who deserve a future, ensuring no one is left behind due to circumstances.</p>
+               <span className="w-2 h-2 rounded-full bg-bright-lime"></span> 
+               <span className="text-[13px] font-bold text-gray-800 tracking-[0.15em] uppercase">Core Purpose</span>
             </motion.div>
-            <motion.div 
+            
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
+              className="text-[42px] lg:text-[56px] font-serif font-extrabold text-[#0c2444] mb-6 leading-tight tracking-tight"
+            >
+              Our <span className="text-orioles-orange">Mission</span>
+            </motion.h2>
+            
+            <motion.p 
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-              className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 text-center"
+              className="text-[18px] text-gray-600 leading-relaxed font-medium"
             >
-              <div className="w-16 h-16 bg-orioles-orange text-white rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users size={28} />
-              </div>
-              <h3 className="text-xl font-bold mb-4">Empower Women</h3>
-              <p className="text-white/80">With skills and financial independence, transforming them into community leaders.</p>
-            </motion.div>
+              We exist to create lasting change by addressing the root causes of poverty and inequality. We do not believe in just helping people survive; we believe in helping them thrive.
+            </motion.p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+            
+            {/* Card 1 */}
             <motion.div 
-              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}
-              className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 text-center"
+              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}
+              className="bg-white rounded-[2.5rem] p-8 lg:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-100 hover:-translate-y-2 transition-transform duration-500 group relative overflow-hidden flex flex-col justify-end min-h-[400px]"
             >
-              <div className="w-16 h-16 bg-persian-blue text-white rounded-full flex items-center justify-center mx-auto mb-6">
-                <Hammer size={28} />
+              {/* Background Image & Gradient */}
+              <div className="absolute inset-0 z-0">
+                <img src="/src/assets/images/mission_education.png" alt="Education" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-transparent group-hover:via-white/50 transition-colors duration-500"></div>
               </div>
-              <h3 className="text-xl font-bold mb-4">Equip Individuals</h3>
-              <p className="text-white/80">With practical tools, mentorship, and training for lasting self-reliance.</p>
+              
+              <div className="absolute top-0 right-0 w-32 h-32 bg-bright-lime/10 rounded-full blur-[40px] group-hover:bg-bright-lime/20 transition-colors duration-500 z-0"></div>
+              
+              <div className="w-16 h-16 bg-bright-lime shadow-md shadow-bright-lime/20 text-gray-900 rounded-[1.25rem] flex items-center justify-center mb-6 relative z-10 group-hover:scale-110 transition-transform duration-500 mt-20">
+                <BookOpen size={28} strokeWidth={2} />
+              </div>
+              <h3 className="text-[22px] font-bold text-gray-900 mb-3 tracking-tight relative z-10">Provide Quality Education</h3>
+              <div className="bg-white/50 backdrop-blur-md p-4 rounded-xl border border-white/50 shadow-sm relative z-10">
+                <p className="text-gray-900 text-[15px] leading-relaxed font-medium">
+                  To children who deserve a future, ensuring no one is left behind due to circumstances.
+                </p>
+              </div>
             </motion.div>
+
+            {/* Card 2 */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}
+              className="bg-white rounded-[2.5rem] p-8 lg:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-100 hover:-translate-y-2 transition-transform duration-500 group relative overflow-hidden flex flex-col justify-end min-h-[400px]"
+            >
+              {/* Background Image & Gradient */}
+              <div className="absolute inset-0 z-0">
+                <img src="/src/assets/images/mission_women.png" alt="Women Empowerment" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-transparent group-hover:via-white/50 transition-colors duration-500"></div>
+              </div>
+
+              <div className="absolute top-0 right-0 w-32 h-32 bg-orioles-orange/10 rounded-full blur-[40px] group-hover:bg-orioles-orange/20 transition-colors duration-500 z-0"></div>
+
+              <div className="w-16 h-16 bg-orioles-orange shadow-md shadow-orioles-orange/20 text-white rounded-[1.25rem] flex items-center justify-center mb-6 relative z-10 group-hover:scale-110 transition-transform duration-500 mt-20">
+                <Users size={28} strokeWidth={2} />
+              </div>
+              <h3 className="text-[22px] font-bold text-gray-900 mb-3 tracking-tight relative z-10">Empower Women</h3>
+              <div className="bg-white/50 backdrop-blur-md p-4 rounded-xl border border-white/50 shadow-sm relative z-10">
+                <p className="text-gray-900 text-[15px] leading-relaxed font-medium">
+                  With skills and financial independence, transforming them into community leaders.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Card 3 */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.5 }}
+              className="bg-white rounded-[2.5rem] p-8 lg:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-100 hover:-translate-y-2 transition-transform duration-500 group relative overflow-hidden flex flex-col justify-end min-h-[400px]"
+            >
+              {/* Background Image & Gradient */}
+              <div className="absolute inset-0 z-0">
+                <img src="/src/assets/images/mission_equip.png" alt="Equip Individuals" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-transparent group-hover:via-white/50 transition-colors duration-500"></div>
+              </div>
+
+              <div className="absolute top-0 right-0 w-32 h-32 bg-persian-blue/10 rounded-full blur-[40px] group-hover:bg-persian-blue/20 transition-colors duration-500 z-0"></div>
+
+              <div className="w-16 h-16 bg-persian-blue shadow-md shadow-persian-blue/20 text-white rounded-[1.25rem] flex items-center justify-center mb-6 relative z-10 group-hover:scale-110 transition-transform duration-500 mt-20">
+                <Hammer size={28} strokeWidth={2} />
+              </div>
+              <h3 className="text-[22px] font-bold text-gray-900 mb-3 tracking-tight relative z-10">Equip Individuals</h3>
+              <div className="bg-white/50 backdrop-blur-md p-4 rounded-xl border border-white/50 shadow-sm relative z-10">
+                <p className="text-gray-900 text-[15px] leading-relaxed font-medium">
+                  With practical tools, mentorship, and training for lasting self-reliance.
+                </p>
+              </div>
+            </motion.div>
+
           </div>
         </div>
       </section>
