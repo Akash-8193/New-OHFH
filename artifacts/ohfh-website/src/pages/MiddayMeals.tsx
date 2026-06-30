@@ -134,7 +134,7 @@ const MiddayMeals = () => {
           <div className="pt-8 border-t border-white/20">
             <p className="text-white/80 mb-6">Or make a custom donation:</p>
             <MagneticButton>
-              <a href="https://razorpay.me/@onehandforhappiness" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-white text-ultra-violet px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-gray-100 transition-colors">
+              <a href="#" onClick={(e) => e.preventDefault()} className="inline-flex items-center gap-2 bg-white text-ultra-violet px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-gray-100 transition-colors">
                 Custom Donation <ArrowRight size={20} />
               </a>
             </MagneticButton>

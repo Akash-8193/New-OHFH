@@ -193,7 +193,7 @@ const Workshop = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <MagneticButton>
-              <a href="https://razorpay.me/@onehandforhappiness" target="_blank" rel="noreferrer" className="inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-white text-[#0c2444] px-10 py-5 rounded-full font-bold text-lg shadow-[0_10px_30px_rgba(255,255,255,0.3)] hover:bg-gray-100 transition-colors">
+              <a href="#" onClick={(e) => e.preventDefault()} className="inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-white text-[#0c2444] px-10 py-5 rounded-full font-bold text-lg shadow-[0_10px_30px_rgba(255,255,255,0.3)] hover:bg-gray-100 transition-colors">
                 Donate Now <ArrowRight size={20} />
               </a>
             </MagneticButton>

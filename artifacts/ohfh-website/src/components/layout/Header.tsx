@@ -100,7 +100,7 @@ const Header = () => {
 
         <div className="hidden lg:block">
           <MagneticButton>
-            <a href="https://razorpay.me/@onehandforhappiness" target="_blank" rel="noreferrer" className="bg-orioles-orange text-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-orange-600 transition-colors inline-block">
+            <a href="#" onClick={(e) => e.preventDefault()} className="bg-orioles-orange text-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-orange-600 transition-colors inline-block">
               DONATE NOW
             </a>
           </MagneticButton>
@@ -144,7 +144,7 @@ const Header = () => {
                 </Link>
               ))}
 
-              <a href="https://razorpay.me/@onehandforhappiness" target="_blank" rel="noreferrer" className="bg-orioles-orange text-white text-center px-6 py-4 rounded-full font-bold shadow-lg mt-4 text-xl">
+              <a href="#" onClick={(e) => e.preventDefault()} className="bg-orioles-orange text-white text-center px-6 py-4 rounded-full font-bold shadow-lg mt-4 text-xl">
                 DONATE NOW
               </a>
             </motion.div>

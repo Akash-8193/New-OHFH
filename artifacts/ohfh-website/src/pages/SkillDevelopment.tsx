@@ -51,7 +51,7 @@ const SkillDevelopment = () => {
               A skill is more than just a tool for employment—it is a pathway to self-reliance, dignity, and lasting change. Millions struggle to break free from poverty due to a lack of practical opportunities. We bridge this gap by equipping individuals with the hard skills they need to build a better future.
             </p>
             <MagneticButton>
-              <a href="https://razorpay.me/@onehandforhappiness" target="_blank" rel="noreferrer" className="btn-skew inline-flex items-center gap-2 bg-[#0c2444] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#081a33] transition-all shadow-xl">
+              <a href="#" onClick={(e) => e.preventDefault()} className="btn-skew inline-flex items-center gap-2 bg-[#0c2444] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#081a33] transition-all shadow-xl">
                 Fund a Student <ArrowRight size={20} />
               </a>
             </MagneticButton>
@@ -222,7 +222,7 @@ const SkillDevelopment = () => {
                 <h3 className="text-3xl font-bold mb-4">Sponsor a Skill</h3>
                 <p className="text-white/90 text-lg mb-8">Cover the cost of a 3-month vocational training course for one individual.</p>
               </div>
-              <a href="https://razorpay.me/@onehandforhappiness" target="_blank" rel="noreferrer" className="w-full bg-white text-orioles-orange py-4 rounded-full font-bold text-center hover:bg-gray-100 transition-colors">Donate Now</a>
+              <a href="#" onClick={(e) => e.preventDefault()} className="w-full bg-white text-orioles-orange py-4 rounded-full font-bold text-center hover:bg-gray-100 transition-colors">Donate Now</a>
             </div>
 
             <div className="bg-[#0c2444] p-10 rounded-[32px] text-white flex flex-col justify-between hover:-translate-y-2 transition-transform duration-300">
@@ -230,7 +230,7 @@ const SkillDevelopment = () => {
                 <h3 className="text-3xl font-bold mb-4">Provide Tools</h3>
                 <p className="text-white/90 text-lg mb-8">Donate laptops, sewing machines, or tools for our practical workshops.</p>
               </div>
-              <a href="https://razorpay.me/@onehandforhappiness" target="_blank" rel="noreferrer" className="w-full border-2 border-white text-white py-4 rounded-full font-bold text-center hover:bg-white hover:text-[#0c2444] transition-colors">Contribute Tools</a>
+              <a href="#" onClick={(e) => e.preventDefault()} className="w-full border-2 border-white text-white py-4 rounded-full font-bold text-center hover:bg-white hover:text-[#0c2444] transition-colors">Contribute Tools</a>
             </div>
 
             <div className="bg-ultra-violet p-10 rounded-[32px] text-white flex flex-col justify-between hover:-translate-y-2 transition-transform duration-300">

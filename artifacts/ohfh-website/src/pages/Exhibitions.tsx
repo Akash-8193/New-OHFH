@@ -164,7 +164,7 @@ const Exhibitions = () => {
 
           <div className="text-center">
             <MagneticButton>
-              <a href="https://razorpay.me/@onehandforhappiness" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-white text-[#0c2444] px-12 py-5 rounded-full font-bold text-lg shadow-[0_10px_30px_rgba(255,255,255,0.2)] hover:bg-gray-100 transition-colors">
+              <a href="#" onClick={(e) => e.preventDefault()} className="inline-flex items-center gap-2 bg-white text-[#0c2444] px-12 py-5 rounded-full font-bold text-lg shadow-[0_10px_30px_rgba(255,255,255,0.2)] hover:bg-gray-100 transition-colors">
                 Donate Now <ArrowRight size={20} />
               </a>
             </MagneticButton>

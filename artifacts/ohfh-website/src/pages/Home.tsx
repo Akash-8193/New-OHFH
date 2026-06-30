@@ -106,7 +106,7 @@ const Home = () => {
               className="flex flex-col sm:flex-row items-start sm:items-center gap-5"
             >
               <MagneticButton>
-                <a href="https://razorpay.me/@onehandforhappiness" target="_blank" rel="noreferrer" className="btn-skew bg-[#f94a13] text-white px-8 py-3.5 rounded-full font-bold text-[16px] shadow-[0_4px_14px_rgba(249,74,19,0.4)] hover:shadow-[0_6px_20px_rgba(249,74,19,0.6)] transition-all flex items-center justify-center gap-2 w-full sm:w-auto" data-testid="button-donate-hero">
+                <a href="#" onClick={(e) => e.preventDefault()} className="btn-skew bg-[#f94a13] text-white px-8 py-3.5 rounded-full font-bold text-[16px] shadow-[0_4px_14px_rgba(249,74,19,0.4)] hover:shadow-[0_6px_20px_rgba(249,74,19,0.6)] transition-all flex items-center justify-center gap-2 w-full sm:w-auto" data-testid="button-donate-hero">
                   Donate Now <Heart size={18} />
                 </a>
               </MagneticButton>
@@ -694,7 +694,7 @@ const Home = () => {
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-8 text-gray-600 font-medium text-[17px] leading-relaxed pr-12">
                     You can donate online through our secure payment gateway. We accept one-time and recurring donations. <br /><br />
-                    <a href="https://razorpay.me/@onehandforhappiness" target="_blank" rel="noreferrer" className="text-orioles-orange font-bold hover:underline">Donate Now &rarr;</a>
+                    <a href="#" onClick={(e) => e.preventDefault()} className="text-orioles-orange font-bold hover:underline">Donate Now &rarr;</a>
                   </AccordionContent>
                 </AccordionItem>
 

@@ -76,7 +76,7 @@ const WomenEmpowerment = () => {
                 When a woman is empowered, she uplifts her family, strengthens her community, and transforms society. Yet, many women face barriers to education, financial independence, and basic rights. At One Hand For Happiness, we are committed to breaking these barriers by providing women with the tools, resources, and support they need to thrive.
               </p>
               <MagneticButton>
-                <a href="https://razorpay.me/@onehandforhappiness" target="_blank" rel="noreferrer" className="btn-skew inline-flex items-center gap-2 bg-[#0c2444] text-white px-8 py-4 rounded-full font-bold text-base hover:bg-[#081a33] transition-all shadow-xl">
+                <a href="#" onClick={(e) => e.preventDefault()} className="btn-skew inline-flex items-center gap-2 bg-[#0c2444] text-white px-8 py-4 rounded-full font-bold text-base hover:bg-[#081a33] transition-all shadow-xl">
                   Support the Cause <ArrowRight size={18} />
                 </a>
               </MagneticButton>
@@ -236,7 +236,7 @@ const WomenEmpowerment = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <MagneticButton>
-                  <a href="https://razorpay.me/@onehandforhappiness" target="_blank" rel="noreferrer" className="inline-flex w-full sm:w-auto justify-center items-center gap-2 bg-orioles-orange text-white px-8 py-4 rounded-full font-bold text-lg shadow-[0_4px_20px_rgba(249,74,19,0.5)] hover:bg-[#e03d0b] transition-colors">
+                  <a href="#" onClick={(e) => e.preventDefault()} className="inline-flex w-full sm:w-auto justify-center items-center gap-2 bg-orioles-orange text-white px-8 py-4 rounded-full font-bold text-lg shadow-[0_4px_20px_rgba(249,74,19,0.5)] hover:bg-[#e03d0b] transition-colors">
                     Donate Now <Heart size={20} />
                   </a>
                 </MagneticButton>

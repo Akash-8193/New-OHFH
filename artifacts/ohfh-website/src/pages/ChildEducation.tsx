@@ -60,7 +60,7 @@ const ChildEducation = () => {
               </motion.p>
               <motion.div variants={fadeUp}>
                 <MagneticButton>
-                  <a href="https://razorpay.me/@onehandforhappiness" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-ultra-violet text-white px-8 py-3.5 rounded-full font-bold text-base hover:bg-opacity-90 transition-all shadow-[0_4px_14px_rgba(72,50,133,0.3)]">
+                  <a href="#" onClick={(e) => e.preventDefault()} className="inline-flex items-center gap-2 bg-ultra-violet text-white px-8 py-3.5 rounded-full font-bold text-base hover:bg-opacity-90 transition-all shadow-[0_4px_14px_rgba(72,50,133,0.3)]">
                     Support Our Mission <ArrowRight size={18} />
                   </a>
                 </MagneticButton>
@@ -177,7 +177,7 @@ const ChildEducation = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <MagneticButton>
-                  <a href="https://razorpay.me/@onehandforhappiness" target="_blank" rel="noreferrer" className="inline-flex w-full sm:w-auto justify-center items-center gap-2 bg-orioles-orange text-white px-8 py-4 rounded-full font-bold text-lg shadow-[0_4px_14px_rgba(249,74,19,0.4)] hover:shadow-[0_6px_20px_rgba(249,74,19,0.6)] hover:bg-[#e03d0b] transition-all">
+                  <a href="#" onClick={(e) => e.preventDefault()} className="inline-flex w-full sm:w-auto justify-center items-center gap-2 bg-orioles-orange text-white px-8 py-4 rounded-full font-bold text-lg shadow-[0_4px_14px_rgba(249,74,19,0.4)] hover:shadow-[0_6px_20px_rgba(249,74,19,0.6)] hover:bg-[#e03d0b] transition-all">
                     Donate Now <Heart size={20} />
                   </a>
                 </MagneticButton>
