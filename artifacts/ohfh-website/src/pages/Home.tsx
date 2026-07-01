@@ -203,10 +203,12 @@ const Home = () => {
               className="flex-1 w-full lg:w-1/2 flex flex-col md:flex-row gap-6 lg:gap-8 min-h-[650px]"
             >
               {/* Left: Main Image with CurtainReveal */}
-              <div className="w-full md:w-[55%] rounded-[32px] overflow-hidden shadow-sm">
-                <CurtainReveal>
-                  <img src="/images/ngo_main.png" alt="NGO Volunteer" className="image-anime w-full h-full object-cover" />
-                </CurtainReveal>
+              <div className="w-full md:w-[55%] min-h-[400px] md:min-h-0 rounded-[32px] overflow-hidden shadow-sm relative">
+                <div className="absolute inset-0">
+                  <CurtainReveal>
+                    <img src="/images/ngo_main.png" alt="NGO Volunteer" className="image-anime w-full h-full object-cover" />
+                  </CurtainReveal>
+                </div>
               </div>
 
               {/* Right: Stacked Cards */}
@@ -492,12 +494,13 @@ const Home = () => {
             <motion.div variants={fadeUp} className="md:row-span-2 group relative overflow-hidden bg-gray-100 h-full min-h-[400px] md:min-h-0 cursor-pointer">
               <Link href="/child-education" className="block w-full h-full">
                 <img src="/images/project-education.png" alt="Child with drawing" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-orioles-orange/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white z-10">
-                  <span className="text-[15px] font-medium mb-1">Child Education</span>
-                  <h3 className="text-[26px] font-bold leading-tight tracking-tight">A Future Begins with Learning</h3>
+                <div className="absolute inset-0 bg-transparent md:bg-orioles-orange/90 bg-gradient-to-t from-black/80 via-black/20 to-transparent md:bg-none opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6 md:p-8 text-white z-10">
+                  <span className="text-[14px] md:text-[15px] font-medium mb-1 text-gray-200 md:text-white">Child Education</span>
+                  <h3 className="text-[22px] md:text-[26px] font-bold leading-tight tracking-tight">A Future Begins with Learning</h3>
                 </div>
-                <div className="absolute top-6 right-6 w-12 h-12 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 z-20 text-orioles-orange shadow-lg">
-                  <ArrowRight size={24} strokeWidth={2.5} />
+                <div className="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-0 md:translate-y-4 group-hover:translate-y-0 z-20 text-orioles-orange shadow-lg">
+                  <ArrowRight size={20} className="block md:hidden" strokeWidth={2.5} />
+                  <ArrowRight size={24} className="hidden md:block" strokeWidth={2.5} />
                 </div>
               </Link>
             </motion.div>
@@ -506,12 +509,13 @@ const Home = () => {
             <motion.div variants={fadeUp} className="group relative overflow-hidden aspect-square bg-gray-100 cursor-pointer">
               <Link href="/women-empowerment" className="block w-full h-full">
                 <img src="/images/project-women.png" alt="Women sewing" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-orioles-orange/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white z-10">
-                  <span className="text-[15px] font-medium mb-1">Women Empowerment</span>
-                  <h3 className="text-[26px] font-bold leading-tight tracking-tight">Strength in Every Woman</h3>
+                <div className="absolute inset-0 bg-transparent md:bg-orioles-orange/90 bg-gradient-to-t from-black/80 via-black/20 to-transparent md:bg-none opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6 md:p-8 text-white z-10">
+                  <span className="text-[14px] md:text-[15px] font-medium mb-1 text-gray-200 md:text-white">Women Empowerment</span>
+                  <h3 className="text-[22px] md:text-[26px] font-bold leading-tight tracking-tight">Strength in Every Woman</h3>
                 </div>
-                <div className="absolute top-6 right-6 w-12 h-12 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 z-20 text-orioles-orange shadow-lg">
-                  <ArrowRight size={24} strokeWidth={2.5} />
+                <div className="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-0 md:translate-y-4 group-hover:translate-y-0 z-20 text-orioles-orange shadow-lg">
+                  <ArrowRight size={20} className="block md:hidden" strokeWidth={2.5} />
+                  <ArrowRight size={24} className="hidden md:block" strokeWidth={2.5} />
                 </div>
               </Link>
             </motion.div>
@@ -520,12 +524,13 @@ const Home = () => {
             <motion.div variants={fadeUp} className="group relative overflow-hidden aspect-square bg-gray-100 cursor-pointer">
               <Link href="/exhibitions" className="block w-full h-full">
                 <img src="/images/project-exhibition.png" alt="Exhibitions" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-orioles-orange/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white z-10">
-                  <span className="text-[15px] font-medium mb-1">Exhibitions</span>
-                  <h3 className="text-[26px] font-bold leading-tight tracking-tight">Stories That Deserve to Be Seen</h3>
+                <div className="absolute inset-0 bg-transparent md:bg-orioles-orange/90 bg-gradient-to-t from-black/80 via-black/20 to-transparent md:bg-none opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6 md:p-8 text-white z-10">
+                  <span className="text-[14px] md:text-[15px] font-medium mb-1 text-gray-200 md:text-white">Exhibitions</span>
+                  <h3 className="text-[22px] md:text-[26px] font-bold leading-tight tracking-tight">Stories That Deserve to Be Seen</h3>
                 </div>
-                <div className="absolute top-6 right-6 w-12 h-12 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 z-20 text-orioles-orange shadow-lg">
-                  <ArrowRight size={24} strokeWidth={2.5} />
+                <div className="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-0 md:translate-y-4 group-hover:translate-y-0 z-20 text-orioles-orange shadow-lg">
+                  <ArrowRight size={20} className="block md:hidden" strokeWidth={2.5} />
+                  <ArrowRight size={24} className="hidden md:block" strokeWidth={2.5} />
                 </div>
               </Link>
             </motion.div>
@@ -534,12 +539,13 @@ const Home = () => {
             <motion.div variants={fadeUp} className="group relative overflow-hidden aspect-square bg-gray-100 cursor-pointer">
               <Link href="/skill-development" className="block w-full h-full">
                 <img src="/images/project-skill.png" alt="Kids with bags" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-orioles-orange/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white z-10">
-                  <span className="text-[15px] font-medium mb-1">Skill Development</span>
-                  <h3 className="text-[26px] font-bold leading-tight tracking-tight">A Pathway to Dignity</h3>
+                <div className="absolute inset-0 bg-transparent md:bg-orioles-orange/90 bg-gradient-to-t from-black/80 via-black/20 to-transparent md:bg-none opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6 md:p-8 text-white z-10">
+                  <span className="text-[14px] md:text-[15px] font-medium mb-1 text-gray-200 md:text-white">Skill Development</span>
+                  <h3 className="text-[22px] md:text-[26px] font-bold leading-tight tracking-tight">A Pathway to Dignity</h3>
                 </div>
-                <div className="absolute top-6 right-6 w-12 h-12 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 z-20 text-orioles-orange shadow-lg">
-                  <ArrowRight size={24} strokeWidth={2.5} />
+                <div className="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-0 md:translate-y-4 group-hover:translate-y-0 z-20 text-orioles-orange shadow-lg">
+                  <ArrowRight size={20} className="block md:hidden" strokeWidth={2.5} />
+                  <ArrowRight size={24} className="hidden md:block" strokeWidth={2.5} />
                 </div>
               </Link>
             </motion.div>
@@ -548,12 +554,13 @@ const Home = () => {
             <motion.div variants={fadeUp} className="group relative overflow-hidden aspect-square bg-gray-100 cursor-pointer">
               <Link href="/projects" className="block w-full h-full">
                 <img src="/images/home-about.png" alt="People serving food" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-orioles-orange/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white z-10">
-                  <span className="text-[15px] font-medium mb-1">Our Best Projects</span>
-                  <h3 className="text-[26px] font-bold leading-tight tracking-tight">Event of Shares</h3>
+                <div className="absolute inset-0 bg-transparent md:bg-orioles-orange/90 bg-gradient-to-t from-black/80 via-black/20 to-transparent md:bg-none opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6 md:p-8 text-white z-10">
+                  <span className="text-[14px] md:text-[15px] font-medium mb-1 text-gray-200 md:text-white">Our Best Projects</span>
+                  <h3 className="text-[22px] md:text-[26px] font-bold leading-tight tracking-tight">Event of Shares</h3>
                 </div>
-                <div className="absolute top-6 right-6 w-12 h-12 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 z-20 text-orioles-orange shadow-lg">
-                  <ArrowRight size={24} strokeWidth={2.5} />
+                <div className="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-0 md:translate-y-4 group-hover:translate-y-0 z-20 text-orioles-orange shadow-lg">
+                  <ArrowRight size={20} className="block md:hidden" strokeWidth={2.5} />
+                  <ArrowRight size={24} className="hidden md:block" strokeWidth={2.5} />
                 </div>
               </Link>
             </motion.div>

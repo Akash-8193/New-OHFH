@@ -80,10 +80,12 @@ const About = () => {
               initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}
               className="w-full lg:w-[45%] flex justify-center lg:justify-end mt-12 lg:mt-0 relative"
             >
-               <div className="relative inline-block w-full max-w-[600px]">
-                 <CurtainReveal>
-                   <img src="/images/cta-box-image.png" alt="Children holding sign" className="image-anime w-full h-auto object-contain drop-shadow-2xl" />
-                 </CurtainReveal>
+               <div className="relative inline-block w-full max-w-[600px] min-h-[400px] md:min-h-[500px] lg:min-h-[600px]">
+                 <div className="absolute inset-0">
+                   <CurtainReveal>
+                     <img src="/images/cta-box-image.png" alt="Children holding sign" className="image-anime w-full h-full object-contain drop-shadow-2xl" />
+                   </CurtainReveal>
+                 </div>
                  
                  {/* Text Overlay on Cardboard (with background patch to hide old text) */}
                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none" style={{ paddingTop: '34%', paddingLeft: '2%' }}>

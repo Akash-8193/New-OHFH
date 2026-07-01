@@ -28,7 +28,7 @@ const Footer = () => {
             <div>
               <ul className="flex flex-col gap-5">
                 {['Home', 'About Us', 'Contact Us', 'Volunteer', 'Reviews', 'Team'].map((item, idx) => {
-                  const path = item === 'Home' ? '/' : item === 'Reviews' ? '/review' : `/${item.toLowerCase().replace(' ', '-')}`;
+                  const path = item === 'Home' ? '/' : item === 'About Us' ? '/about' : item === 'Reviews' ? '/review' : `/${item.toLowerCase().replace(' ', '-')}`;
                   return (
                     <li key={idx}>
                       <Link href={path} className="text-ultra-violet hover:text-orioles-orange font-bold text-lg transition-colors flex items-center gap-2">
