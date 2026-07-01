@@ -140,7 +140,7 @@ const Contact = () => {
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             
             {/* Left Image */}
-            <div className="w-full lg:w-5/12 h-[600px] rounded-[2rem] overflow-hidden">
+            <div className="w-full lg:w-5/12 min-h-[400px] lg:h-[600px] rounded-[2rem] overflow-hidden">
               <CurtainReveal>
                 <img src="/images/contact_form.png" alt="Volunteer" className="image-anime w-full h-full object-cover" />
               </CurtainReveal>

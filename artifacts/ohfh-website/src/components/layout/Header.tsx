@@ -119,7 +119,7 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 20 }}
-              className="fixed inset-0 bg-white z-40 pt-32 px-6 flex flex-col gap-6 lg:hidden"
+              className="fixed inset-0 bg-white z-40 pt-64 md:pt-48 px-6 pb-6 flex flex-col gap-6 lg:hidden overflow-y-auto"
             >
               {navLinks.slice(0, 2).map(link => (
                 <Link key={link.path} href={link.path} onClick={closeMenu} className="text-2xl font-serif text-ultra-violet border-b border-gray-100 pb-4">

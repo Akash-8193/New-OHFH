@@ -198,19 +198,19 @@ const Home = () => {
               </motion.div>
             </motion.div>
 
-            {/* Right Column (Visuals - Exact Pixel Perfect Grid Layout) */}
+            {/* Right Column (Visuals) */}
             <div
-              className="flex-1 w-full lg:w-1/2 flex gap-6 lg:gap-8 min-h-[650px]"
+              className="flex-1 w-full lg:w-1/2 flex flex-col md:flex-row gap-6 lg:gap-8 min-h-[650px]"
             >
               {/* Left: Main Image with CurtainReveal */}
-              <div className="w-[55%] rounded-[32px] overflow-hidden shadow-sm">
+              <div className="w-full md:w-[55%] rounded-[32px] overflow-hidden shadow-sm">
                 <CurtainReveal>
                   <img src="/images/ngo_main.png" alt="NGO Volunteer" className="image-anime w-full h-full object-cover" />
                 </CurtainReveal>
               </div>
 
               {/* Right: Stacked Cards */}
-              <div className="w-[45%] flex flex-col gap-6 lg:gap-8">
+              <div className="w-full md:w-[45%] flex flex-col gap-6 lg:gap-8">
 
                 {/* Top Right Card */}
                 <motion.div
@@ -361,24 +361,24 @@ const Home = () => {
               initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.8 }}
               className="flex-1 w-full lg:w-1/2 relative flex justify-center lg:justify-start overflow-visible min-h-[500px]"
             >
-              {/* Bulletproof Pixel Layout scaled by parent for responsiveness */}
-              <div className="relative w-[500px] h-[500px] scale-[0.7] sm:scale-90 lg:scale-100 origin-center lg:origin-left">
+              {/* Responsive Fluid Layout */}
+              <div className="relative w-full max-w-[500px] aspect-square mx-auto lg:mx-0">
 
                 {/* Dashed orange border circle (Offset to Top-Left) */}
-                <div className="absolute top-[0px] left-[0px] w-[440px] h-[440px] rounded-full border-[2px] border-dashed border-orioles-orange/80 z-0"></div>
+                <div className="absolute top-[0%] left-[0%] w-[88%] h-[88%] rounded-full border-[2px] border-dashed border-orioles-orange/80 z-0"></div>
 
                 {/* Large main circular image (Offset slightly Bottom-Right) */}
-                <div className="absolute top-[30px] left-[30px] w-[440px] h-[440px] rounded-full overflow-hidden shadow-md z-10 bg-white">
+                <div className="absolute top-[6%] left-[6%] w-[88%] h-[88%] rounded-full overflow-hidden shadow-md z-10 bg-white">
                   <img src="/images/home-about.png" alt="Children learning" className="w-full h-full object-cover" />
                 </div>
 
                 {/* Smaller overlapping circular image (Bottom-Right corner) */}
-                <div className="absolute bottom-[0px] right-[0px] w-[230px] h-[230px] rounded-full overflow-hidden shadow-2xl border-[8px] border-white z-20 bg-white">
+                <div className="absolute bottom-[0%] right-[0%] w-[46%] h-[46%] rounded-full overflow-hidden shadow-2xl border-[8px] border-white z-20 bg-white">
                   <img src="/images/project-education.png" alt="Children playing" className="w-full h-full object-cover" />
                 </div>
 
                 {/* Decorative sunburst lines */}
-                <div className="absolute bottom-[110px] right-[-30px] w-[60px] h-[60px] z-10 text-orioles-orange">
+                <div className="absolute bottom-[22%] right-[-6%] w-[12%] h-[12%] z-10 text-orioles-orange">
                   <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round">
                     <path d="M 10 25 L 35 10 M 5 50 L 35 50 M 10 75 L 35 90" />
                   </svg>
@@ -647,7 +647,7 @@ const Home = () => {
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-12 items-start">
 
             {/* Left Column (Images & Contact Box) */}
-            <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="w-full lg:w-[45%] flex gap-4 h-[600px]">
+            <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="w-full lg:w-[45%] flex gap-4 min-h-[400px] lg:h-[600px]">
               {/* Tall Image */}
               <div className="w-1/2 h-full rounded-2xl overflow-hidden shadow-sm">
                 <img src="/images/our-faqs-image-1.jpg" alt="Children playing" className="w-full h-full object-cover" />
