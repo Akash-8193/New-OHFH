@@ -140,11 +140,15 @@ const Contact = () => {
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             
             {/* Left Image */}
-            <div className="w-full lg:w-5/12 min-h-[400px] lg:h-[600px] rounded-[2rem] overflow-hidden">
-              <CurtainReveal>
-                <img src="/images/contact_form.png" alt="Volunteer" className="image-anime w-full h-full object-cover" />
-              </CurtainReveal>
-            </div>
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }} 
+              whileInView={{ opacity: 1, x: 0 }} 
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="w-full lg:w-5/12 h-[400px] md:h-[500px] lg:h-[600px] rounded-[2rem] overflow-hidden shadow-sm"
+            >
+              <img src="/images/contact_form.png" alt="Volunteer" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            </motion.div>
 
             {/* Right Form */}
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="w-full lg:w-7/12">

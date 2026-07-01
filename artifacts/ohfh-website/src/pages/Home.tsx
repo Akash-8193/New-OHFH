@@ -203,13 +203,17 @@ const Home = () => {
               className="flex-1 w-full lg:w-1/2 flex flex-col md:flex-row gap-6 lg:gap-8 min-h-[650px]"
             >
               {/* Left: Main Image with CurtainReveal */}
-              <div className="w-full md:w-[55%] min-h-[400px] md:min-h-0 rounded-[32px] overflow-hidden shadow-sm relative">
+              <motion.div 
+                initial={{ opacity: 0, x: -30 }} 
+                whileInView={{ opacity: 1, x: 0 }} 
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="w-full md:w-[55%] min-h-[400px] md:min-h-0 rounded-[32px] overflow-hidden shadow-sm relative"
+              >
                 <div className="absolute inset-0">
-                  <CurtainReveal>
-                    <img src="/images/ngo_main.png" alt="NGO Volunteer" className="image-anime w-full h-full object-cover" />
-                  </CurtainReveal>
+                  <img src="/images/ngo_main.png" alt="NGO Volunteer" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
-              </div>
+              </motion.div>
 
               {/* Right: Stacked Cards */}
               <div className="w-full md:w-[45%] flex flex-col gap-6 lg:gap-8">

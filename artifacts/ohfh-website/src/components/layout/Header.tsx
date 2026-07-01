@@ -41,7 +41,7 @@ const Header = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'shadow-md' : ''}`}>
       {/* Top Bar */}
-      <div className="bg-ultra-violet text-white text-xs py-2 px-4 md:px-8 flex flex-col md:flex-row justify-between items-center z-50 relative">
+      <div className="hidden md:flex bg-ultra-violet text-white text-xs py-2 px-4 md:px-8 flex-col md:flex-row justify-between items-center z-50 relative">
         <div className="flex flex-col md:flex-row gap-2 md:gap-6 items-center mb-2 md:mb-0">
           <span className="flex items-center gap-1"><MapPin size={12} /> Area: Noida, Uttar Pradesh</span>
           <span className="flex items-center gap-1"><Mail size={12} /> onehandforhappiness@gmail.com</span>
@@ -119,7 +119,7 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 20 }}
-              className="fixed inset-0 bg-white z-40 pt-64 md:pt-48 px-6 pb-6 flex flex-col gap-6 lg:hidden overflow-y-auto"
+              className="fixed inset-0 bg-white z-40 pt-32 md:pt-48 px-6 pb-6 flex flex-col gap-6 lg:hidden overflow-y-auto"
             >
               {navLinks.slice(0, 2).map(link => (
                 <Link key={link.path} href={link.path} onClick={closeMenu} className="text-2xl font-serif text-ultra-violet border-b border-gray-100 pb-4">

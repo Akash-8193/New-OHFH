@@ -10,7 +10,7 @@ interface PageLayoutProps {
 
 const PageLayout = ({ children }: PageLayoutProps) => {
   return (
-    <div className="flex flex-col min-h-screen pt-[104px]">
+    <div className="flex flex-col min-h-screen pt-[72px] md:pt-[104px]">
       <MagicCursor />
       <Header />
       <motion.main 
